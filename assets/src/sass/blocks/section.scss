@@ -526,20 +526,28 @@
   }
 }
 
-.login-screen-section, .reset-password-section {
+.il_block.login-screen-section, .il_block.reset-password-section {
+  @include tab-only {
+    min-height: calc(100vh - 141px);
+  }
+  @include limbo-only {
+    min-height: calc(100vh - 141px);
+  }
   label, .frm_checkbox {
     text-align: right !important;
   }
+  .il_block_bg {
+    @include limbo-max {
+      position: relative;
+      .desk_bg {
+        display: none;
+      }
+      .bg_element {
+        position: relative;
+      }
+    }
+  }
   .il_section_inner {
-    @include mob-only {
-        min-height: calc(100vh - 13.2rem);
-    }
-    @include tab-only {
-        min-height: calc(100vh - 23.5rem);
-    }
-    @include limbo-only {
-        min-height: calc(100vh - 23.5rem);
-    }
     @include desk-min {
         min-height: calc(100vh - 17.2rem);
         max-width: 50%;
@@ -553,6 +561,10 @@
       flex-direction: column;
       justify-content: center;
       margin: 0 auto;
+      @include limbo-max {
+        max-width: 469px;
+        margin-bottom: auto;
+      }
       .frm_form_fields {
         display: flex;
         flex-direction: column;

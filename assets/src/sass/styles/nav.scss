@@ -94,6 +94,7 @@
     .header-main {
       background-color: #fff;
       box-shadow: -10px 2px 34px 0px rgba(0, 0, 0, 0.18);
+      position: relative;
       &-inner {
         display: flex;
         width: 90%;
@@ -140,9 +141,9 @@
                 font-size: 17px;
               }
           }
-          &:nth-last-child(2) {
-            margin-right: 3rem;
-          }
+          // &:nth-last-child(2) {
+          //   margin-right: 3rem;
+          // }
           &.menu-li-hide-desktop {
             display: none;
           }

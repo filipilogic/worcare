@@ -1,4 +1,16 @@
 #primary {
+    .with_frm_style .frm_message, .frm_success_style {
+        background-color: #FAFAFA;
+        margin: 0;
+        border: 0;
+        padding: 20px 0;
+        p {
+            font-size: 16px;
+            font-weight: 700;
+            color: #6F7AE2;
+            margin-bottom: 0;
+        }
+    }
     .employer-form {
         background: url('/wp-content/uploads/2023/12/Bg-Element-2.png'), #fff;
         background-position: top right;

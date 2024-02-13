@@ -1088,12 +1088,15 @@ div.margin-xl {
     font-size: 16px;
   }
 }
-@media (min-width: 479.6px) {
-  .site_footer .footer_main .cols-3 .column.footer_col_1 {
-    width: 46%;
+@media (min-width: 797.6px) and (max-width: 1199.5px) {
+  .site_footer .footer_main .tab-cols-2 .column {
+    margin-top: 10px;
   }
-  .site_footer .footer_main .cols-3 .column.footer_col_1 p {
-    max-width: 50rem;
+}
+@media (min-width: 797.6px) {
+  .site_footer .footer_main .cols-3 .column.footer_col_1, .site_footer .footer_main .cols-3 .column.footer_col_2, .site_footer .footer_main .cols-3 .column.footer_col_3 {
+    width: -moz-fit-content;
+    width: fit-content;
   }
   .site_footer .footer_main .cols-3 .column {
     width: 25%;
@@ -1102,10 +1105,10 @@ div.margin-xl {
     padding-right: 2.4rem;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
   }
   .site_footer .footer_main .footer_col_1 figure {
-    margin: 0 5px 0 0;
+    margin: 5px 0 0 5px;
   }
   .site_footer .footer_main .footer_col_1 p {
     font-size: 16px;
@@ -1115,9 +1118,27 @@ div.margin-xl {
     margin-bottom: -3px;
   }
   .site_footer .footer_main .footer_col_2 {
-    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: auto;
   }
   .site_footer .footer_main .footer_col_2 figure {
+    margin: 0 5px 0 0;
+  }
+  .site_footer .footer_main .footer_col_2 p {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: -3px;
+  }
+  .site_footer .footer_main .footer_col_3 {
+    margin-right: 0;
+    padding-left: 2.4rem;
+  }
+  .site_footer .footer_main .footer_col_3 figure {
     margin: 1rem 1rem -1rem 0;
   }
 }
@@ -1131,13 +1152,70 @@ div.margin-xl {
   .site_footer .footer_main .footer_col_1 {
     order: 1;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .site_footer .footer_main .footer_col_1 p {
     color: #fff;
     font-weight: 300;
-    margin-top: 2.5rem;
+    margin-top: 3rem;
     margin-bottom: 0;
+  }
+  .site_footer .footer_main .footer_col_2 {
+    order: 2;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .site_footer .footer_main .footer_col_2 p {
+    color: #fff;
+    font-weight: 300;
+    margin: 0;
+  }
+  .site_footer .footer_main .footer_col_2 figure {
+    margin-top: 6px;
+  }
+  .site_footer .footer_main .footer_col_3 {
+    order: 3;
+  }
+}
+@media (min-width: 479.6px) and (max-width: 797.5px) {
+  .site_footer .footer_main .footer_col_1 {
+    width: 100%;
+    order: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px !important;
+  }
+  .site_footer .footer_main .footer_col_1 figure {
+    margin: 5px 0 0 5px;
+  }
+  .site_footer .footer_main .footer_col_1 p {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: -3px;
+  }
+  .site_footer .footer_main .footer_col_2 {
+    width: 50%;
+    order: 1;
+    display: flex;
+    align-items: center;
+  }
+  .site_footer .footer_main .footer_col_2 figure {
+    margin: 0 5px 0 0;
+  }
+  .site_footer .footer_main .footer_col_2 p {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: -3px;
+  }
+  .site_footer .footer_main .footer_col_3 {
+    width: 50%;
+    order: 2;
+    margin-top: 10px;
   }
 }
 .site_footer .footer_main_inner {
@@ -1145,6 +1223,18 @@ div.margin-xl {
   flex-wrap: wrap;
 }
 
+#primary .with_frm_style .frm_message, #primary .frm_success_style {
+  background-color: #FAFAFA;
+  margin: 0;
+  border: 0;
+  padding: 20px 0;
+}
+#primary .with_frm_style .frm_message p, #primary .frm_success_style p {
+  font-size: 16px;
+  font-weight: 700;
+  color: #6F7AE2;
+  margin-bottom: 0;
+}
 #primary .employer-form {
   background: url("/wp-content/uploads/2023/12/Bg-Element-2.png"), #fff;
   background-position: top right;
@@ -2835,6 +2925,8 @@ main {
     position: sticky;
     top: 0;
     background-color: #fff;
+    box-shadow: -10px 2px 34px 0px rgba(0, 0, 0, 0.18);
+    position: relative;
     height: 13rem;
   }
   .header-main-inner {
@@ -3056,6 +3148,7 @@ main {
   .header-version-1 .header-main {
     background-color: #fff;
     box-shadow: -10px 2px 34px 0px rgba(0, 0, 0, 0.18);
+    position: relative;
   }
   .header-version-1 .header-main-inner {
     display: flex;
@@ -3101,9 +3194,6 @@ main {
   }
   .header-version-1 .header-main-inner #primary-menu > li .sub-menu-trigger > .sub-menu {
     font-size: 17px;
-  }
-  .header-version-1 .header-main-inner #primary-menu > li:nth-last-child(2) {
-    margin-right: 3rem;
   }
   .header-version-1 .header-main-inner #primary-menu > li.menu-li-hide-desktop {
     display: none;
@@ -8592,26 +8682,32 @@ textarea {
   overflow: hidden;
 }
 
-.login-screen-section label, .login-screen-section .frm_checkbox, .reset-password-section label, .reset-password-section .frm_checkbox {
-  text-align: right !important;
-}
-@media (max-width: 479.5px) {
-  .login-screen-section .il_section_inner, .reset-password-section .il_section_inner {
-    min-height: calc(100vh - 13.2rem);
-  }
-}
 @media (min-width: 479.6px) and (max-width: 797.5px) {
-  .login-screen-section .il_section_inner, .reset-password-section .il_section_inner {
-    min-height: calc(100vh - 23.5rem);
+  .il_block.login-screen-section, .il_block.reset-password-section {
+    min-height: calc(100vh - 141px);
   }
 }
 @media (min-width: 797.6px) and (max-width: 1199.5px) {
-  .login-screen-section .il_section_inner, .reset-password-section .il_section_inner {
-    min-height: calc(100vh - 23.5rem);
+  .il_block.login-screen-section, .il_block.reset-password-section {
+    min-height: calc(100vh - 141px);
+  }
+}
+.il_block.login-screen-section label, .il_block.login-screen-section .frm_checkbox, .il_block.reset-password-section label, .il_block.reset-password-section .frm_checkbox {
+  text-align: right !important;
+}
+@media (max-width: 1199.5px) {
+  .il_block.login-screen-section .il_block_bg, .il_block.reset-password-section .il_block_bg {
+    position: relative;
+  }
+  .il_block.login-screen-section .il_block_bg .desk_bg, .il_block.reset-password-section .il_block_bg .desk_bg {
+    display: none;
+  }
+  .il_block.login-screen-section .il_block_bg .bg_element, .il_block.reset-password-section .il_block_bg .bg_element {
+    position: relative;
   }
 }
 @media (min-width: 1199.6px) {
-  .login-screen-section .il_section_inner, .reset-password-section .il_section_inner {
+  .il_block.login-screen-section .il_section_inner, .il_block.reset-password-section .il_section_inner {
     min-height: calc(100vh - 17.2rem);
     max-width: 50%;
     width: 50%;
@@ -8619,32 +8715,38 @@ textarea {
     margin-right: 0;
   }
 }
-.login-screen-section .il_section_inner .il_block_intro, .reset-password-section .il_section_inner .il_block_intro {
+.il_block.login-screen-section .il_section_inner .il_block_intro, .il_block.reset-password-section .il_section_inner .il_block_intro {
   max-width: 370px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
 }
-.login-screen-section .il_section_inner .il_block_intro .frm_form_fields, .reset-password-section .il_section_inner .il_block_intro .frm_form_fields {
+@media (max-width: 1199.5px) {
+  .il_block.login-screen-section .il_section_inner .il_block_intro, .il_block.reset-password-section .il_section_inner .il_block_intro {
+    max-width: 469px;
+    margin-bottom: auto;
+  }
+}
+.il_block.login-screen-section .il_section_inner .il_block_intro .frm_form_fields, .il_block.reset-password-section .il_section_inner .il_block_intro .frm_form_fields {
   display: flex;
   flex-direction: column;
 }
-.login-screen-section .il_section_inner .il_block_intro .frm_form_fields .frm_description p, .reset-password-section .il_section_inner .il_block_intro .frm_form_fields .frm_description p {
+.il_block.login-screen-section .il_section_inner .il_block_intro .frm_form_fields .frm_description p, .il_block.reset-password-section .il_section_inner .il_block_intro .frm_form_fields .frm_description p {
   text-align: right;
 }
-.login-screen-section .il_section_inner .il_block_intro .frm_form_fields .frm_form_field:not(.login-remember) .frm_primary_label, .reset-password-section .il_section_inner .il_block_intro .frm_form_fields .frm_form_field:not(.login-remember) .frm_primary_label {
+.il_block.login-screen-section .il_section_inner .il_block_intro .frm_form_fields .frm_form_field:not(.login-remember) .frm_primary_label, .il_block.reset-password-section .il_section_inner .il_block_intro .frm_form_fields .frm_form_field:not(.login-remember) .frm_primary_label {
   margin-bottom: 4px;
   color: #0F0F0F;
   font-size: 16px;
   direction: rtl;
 }
-.login-screen-section .il_section_inner .il_block_intro .frm_form_fields .frm_form_field:not(.login-remember) input, .reset-password-section .il_section_inner .il_block_intro .frm_form_fields .frm_form_field:not(.login-remember) input {
+.il_block.login-screen-section .il_section_inner .il_block_intro .frm_form_fields .frm_form_field:not(.login-remember) input, .il_block.reset-password-section .il_section_inner .il_block_intro .frm_form_fields .frm_form_field:not(.login-remember) input {
   padding: 8px 12px !important;
   border-radius: 6px;
   border: 1px solid #D9D9D9;
 }
-.login-screen-section .il_section_inner .il_block_intro .frm_form_fields .frm_submit input, .reset-password-section .il_section_inner .il_block_intro .frm_form_fields .frm_submit input {
+.il_block.login-screen-section .il_section_inner .il_block_intro .frm_form_fields .frm_submit input, .il_block.reset-password-section .il_section_inner .il_block_intro .frm_form_fields .frm_submit input {
   font-size: 16px;
   font-weight: 500;
   color: #fff;
@@ -8654,13 +8756,13 @@ textarea {
   background: var(--color-3);
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.12), 0px 4px 6px -1px rgba(0, 0, 0, 0.12);
 }
-.login-screen-section .il_section_inner .il_block_intro .frm_form_fields .frm_submit input:hover, .reset-password-section .il_section_inner .il_block_intro .frm_form_fields .frm_submit input:hover {
+.il_block.login-screen-section .il_section_inner .il_block_intro .frm_form_fields .frm_submit input:hover, .il_block.reset-password-section .il_section_inner .il_block_intro .frm_form_fields .frm_submit input:hover {
   background: var(--color-1);
 }
-.login-screen-section .il_section_inner .il_block_intro .frm_form_fields .login-remember, .reset-password-section .il_section_inner .il_block_intro .frm_form_fields .login-remember {
+.il_block.login-screen-section .il_section_inner .il_block_intro .frm_form_fields .login-remember, .il_block.reset-password-section .il_section_inner .il_block_intro .frm_form_fields .login-remember {
   margin-bottom: 14px;
 }
-.login-screen-section .il_section_inner .il_block_intro .frm_form_fields .login-remember label, .reset-password-section .il_section_inner .il_block_intro .frm_form_fields .login-remember label {
+.il_block.login-screen-section .il_section_inner .il_block_intro .frm_form_fields .login-remember label, .il_block.reset-password-section .il_section_inner .il_block_intro .frm_form_fields .login-remember label {
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
@@ -8668,16 +8770,16 @@ textarea {
   color: #0F0F0F;
   font-size: 15px;
 }
-.login-screen-section .il_section_inner .il_block_intro .frm_form_fields .login-remember label input[type=checkbox], .reset-password-section .il_section_inner .il_block_intro .frm_form_fields .login-remember label input[type=checkbox] {
+.il_block.login-screen-section .il_section_inner .il_block_intro .frm_form_fields .login-remember label input[type=checkbox], .il_block.reset-password-section .il_section_inner .il_block_intro .frm_form_fields .login-remember label input[type=checkbox] {
   margin-left: 5px;
   margin-right: 0;
 }
-.login-screen-section .il_section_inner .il_block_intro .frm_form_fields .login_lost_pw, .reset-password-section .il_section_inner .il_block_intro .frm_form_fields .login_lost_pw {
+.il_block.login-screen-section .il_section_inner .il_block_intro .frm_form_fields .login_lost_pw, .il_block.reset-password-section .il_section_inner .il_block_intro .frm_form_fields .login_lost_pw {
   text-align: right;
   margin-bottom: 0 !important;
   direction: rtl !important;
 }
-.login-screen-section .il_section_inner .il_block_intro .frm_form_fields .login_lost_pw a, .reset-password-section .il_section_inner .il_block_intro .frm_form_fields .login_lost_pw a {
+.il_block.login-screen-section .il_section_inner .il_block_intro .frm_form_fields .login_lost_pw a, .il_block.reset-password-section .il_section_inner .il_block_intro .frm_form_fields .login_lost_pw a {
   color: #8392AB;
   text-decoration: underline;
 }
