@@ -1,0 +1,16 @@
+{
+    "name": "acf/user-profile",
+    "title": "iLogic User Profile",
+    "description": "A User Profile Block",
+    "category": "ilogic-category",
+    "icon": "id",
+    "keywords": ["user profile", "ilogic"],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "user-profile.php"
+    },
+    "supports": {
+		"align": false,
+		"anchor": true
+	}
+}

@@ -1,0 +1,1064 @@
+.il_block.user-profile {
+  padding: 5rem 0;
+  background: url('/wp-content/uploads/2024/01/ud-bg-element-1.png'), linear-gradient(180deg, #e5eaf4 0%, #eef1f6 100%);
+  background-repeat: no-repeat;
+  background-position: bottom right, center;
+  background-size: 53.2rem 38.6rem, auto;
+  @include limbo-max {
+    padding: 8rem 0;
+    background-size: 40rem auto, auto;
+  }
+
+  .ud-blurred {
+    filter: blur(4px);
+    cursor: pointer;
+    > * {
+      pointer-events: none;
+    }
+  }
+
+  #triggerTextMessage {
+    display: none;
+    color: #fff;
+    background-color: #F1B122;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+    width: 65rem;
+    @include tab-max {
+      width: 60rem;
+      bottom: 50px;
+    }
+  }
+
+  .profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .ud-main-h1 {
+    width: 100%;
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-1);
+    text-align: right;
+    margin-bottom: 3.5rem;
+    @include limbo-max {
+      font-size: 30px;
+      margin-bottom: 4.5rem;
+    }
+  }
+
+  .ud-width-1_4 {
+    width: 24%;
+    padding: 20px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    direction: rtl;
+    margin-bottom: 2%;
+    @include tab-max {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
+    @include limbo-max {
+      padding: 4rem;
+    }
+    @include sm-desk-only {
+      padding: 18px;
+    }
+    @include md-desk-only {
+      padding: 18px;
+    }
+  }
+
+  .ud-width-2_4 {
+    width: 49%;
+    padding: 20px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    direction: rtl;
+    margin-bottom: 2%;
+    @include tab-max {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
+    @include limbo-max {
+      padding: 4rem;
+    }
+    @include sm-desk-only {
+      padding: 18px;
+    }
+    @include md-desk-only {
+      padding: 18px;
+    }
+  }
+
+  .ud-width-3_4 {
+    width: 74%;
+    padding: 20px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.05);
+    direction: rtl;
+    margin-bottom: 2%;
+    @include tab-max {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
+    @include limbo-max {
+      padding: 4rem;
+    }
+    @include sm-desk-only {
+      padding: 18px;
+    }
+    @include md-desk-only {
+      padding: 18px;
+    }
+  }
+
+  .ud-width-4_4 {
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(273deg, #002D69 8.72%, #043E8B 87.84%);
+    box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.05);
+    direction: rtl;
+    margin-bottom: 2%;
+    @include tab-max {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
+    @include limbo-max {
+      padding: 4rem;
+    }
+    @include sm-desk-only {
+      padding: 18px;
+    }
+    @include md-desk-only {
+      padding: 18px;
+    }
+  }
+
+  .ud-company-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    fieldset {
+      padding-bottom: 0;
+      .ud-company-logo-upload {
+        margin-bottom: 10px;
+        .frm_primary_label {
+          text-align: center;
+          margin-bottom: 10px;
+          font-size: 2rem;
+          font-weight: 600;
+          color: #1E1E1E;
+          @include limbo-max {
+              font-size: 15px;
+          }
+        }
+        .frm_dropzone.frm_single_upload {
+          max-width: none;
+          .dz-message {
+            width: 220px;
+            height: 220px;
+            border-radius: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+          }
+          .frmsvg {
+              display: none;
+          }
+          .frm_upload_text {
+              font-size: 16px;
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 10px;
+              &::before {
+                  content: url('/wp-content/uploads/2023/12/Icon-frame.png');
+              }
+          }
+          .frm_small_text {
+              p {
+                  margin-bottom: 0;
+                  font-size: 16px;
+              }
+          }
+        }
+        .frm_error {
+          margin-top: 12px;
+          text-align: center;
+        }
+      }
+      .frm_submit {
+        text-align: center;
+        input {
+          font-size: 16px;
+          font-weight: 500;
+          color: #fff;
+          padding: 8px 13px;
+          border-radius: 6px;
+          border-color: transparent;
+          background: var(--color-3);
+          box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.12), 0px 4px 6px -1px rgba(0, 0, 0, 0.12);
+          &:hover {
+            background: var(--color-1);
+          }
+        }
+        img {
+          display: none;
+        }
+      }
+    }
+    .frm_error_style {
+      display: none;
+    }
+    .ud-company-name {
+      margin-top: 1rem;
+      margin-bottom: 0;
+    }
+    @include tab-max {
+      order: 2;
+    }
+  }
+
+  .ud-main-info {
+    text-align: right;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0;
+    .ud-main-info-col-1 {
+      width: 38%;
+      display: flex;
+      @include tab-max {
+        width: 100%;
+        order: 2;
+      }
+      .ud-main-info-lottie {
+        width: 42rem;
+        height: auto;
+        margin-top: auto;
+        margin-bottom: 0;
+        @include tab-max {
+          margin-right: auto;
+        }
+      }
+      padding: 20px 20px 0 20px;
+      @include tab-max {
+        padding: 0 4rem 0 4rem;
+      }
+      @include limbo-only {
+        padding: 4rem 4rem 0 4rem;
+      }
+      @include sm-desk-only {
+        padding: 18px 18px 0 18px;
+      }
+      @include md-desk-only {
+        padding: 18px 18px 0 18px;
+      }
+    }
+    .ud-main-info-col-2 {
+      width: 60%;
+      @include tab-max {
+        width: 100%;
+        order: 1;
+      }
+      .ud-org-details {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--color-1);
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        svg {
+          margin-left: 8px;
+        }
+      }
+      .ud-welcome-full-name {
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: var(--color-2);
+        margin-bottom: 10px;
+        @include limbo-max {
+          font-size: 20px;
+        }
+      }
+      .ud-main-info-last-p {
+        font-size: 2rem;
+        margin-bottom: 2.7rem;
+        @include limbo-max {
+          font-size: 16px;
+          margin-bottom: 5px;
+        }
+      }
+      .il_btn {
+        padding: 1.4rem 2.8rem;
+        align-items: center;
+        font-weight: 600;
+        img {
+          width: 20px;
+          margin-left: 8px;
+        }
+        @include limbo-max {
+          padding: 2rem 4.8rem;
+          font-size: 14px;
+        }
+      }
+      padding: 20px;
+      @include tab-max {
+        padding: 4rem 4rem 0 4rem;
+      }
+      @include limbo-only {
+        padding: 4rem 4rem 4rem 0;
+      }
+      @include sm-desk-only {
+        padding: 18px;
+      }
+      @include md-desk-only {
+        padding: 18px;
+      }
+    }
+    @include tab-max {
+      order: 1;
+    }
+  }
+
+  .ud-badge-section {
+    background: linear-gradient(273deg, #002D69 8.72%, #043E8B 87.84%);
+    display: flex;
+    flex-wrap: wrap;
+    .ud-badge-top {
+      font-size: 18px;
+      color: #fff;
+      font-weight: 500;
+      text-align: right;
+      display: flex;
+      align-items: center;
+      margin-bottom: auto;
+      svg {
+        margin-left: 7px;
+      }
+    }
+    .ud-badge-img {
+      box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.05);
+      margin: auto auto 0 auto;
+      @include limbo-max {
+        margin-top: 5rem;
+      }
+    }
+    @include limbo-only {
+      width: 49%;
+    }
+    @include tab-max {
+      order: 3;
+      flex-direction: column;
+    }
+  }
+
+  .ud-dl-badges {
+    background: linear-gradient(273deg, #002D69 8.72%, #043E8B 87.84%);
+    display: flex;
+    flex-direction: column;
+    .ud-dl-badges-top {
+      font-size: 18px;
+      color: #fff;
+      font-weight: 500;
+      text-align: right;
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      svg {
+        margin-left: 7px;
+      }
+    }
+    p {
+      font-size: 16px;
+      color: #fff;
+      text-align: right;
+      margin-bottom: 6rem;
+      @include limbo-max {
+        margin-bottom: 50px;
+      }
+    }
+    .il_btn {
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
+      color: var(--color-1);
+      background-color: #fff;
+      padding: 1.4rem 1.7rem;
+      margin: auto auto 0 auto;
+      img {
+        margin-right: 7px;
+      }
+      @include limbo-max {
+        padding: 2rem 4rem;
+        max-width: 248px;
+      }
+    }
+    @include limbo-only {
+      width: 49%;
+    }
+    @include tab-max {
+      order: 4;
+    }
+  }
+
+  .ud-corp-charter {
+    background: url('/wp-content/uploads/2024/01/corp-charter-bg.jpg');
+    display: flex;
+    flex-direction: column;
+    .ud-corp-charter-top {
+      font-size: 18px;
+      color: #fff;
+      font-weight: 500;
+      text-align: right;
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      svg {
+        margin-left: 7px;
+      }
+    }
+    p {
+      font-size: 16px;
+      color: #fff;
+      text-align: right;
+      margin-bottom: 6rem;
+      @include limbo-max {
+        margin-bottom: 50px;
+      }
+      @include limbo-min {
+        max-width: 370px;
+
+      }
+    }
+    .ud-corp-charter-buttons {
+      display: flex;
+      align-items: flex-end;
+      margin-top: auto;
+      @include mob-only {
+        flex-direction: column;
+        align-items: center;
+      }
+      @include tab-min {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+      }
+      .il_edit_charter_btn {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        img {
+          margin-left: 7px;
+        }
+        @include mob-only {
+          font-size: 17px;
+          margin-bottom: 15px;
+        }
+      }
+      .il_btn {
+        justify-content: center;
+        flex-wrap: wrap;
+        color: var(--color-1);
+        background-color: #fff;
+        padding: 1.4rem 2rem;
+        img {
+          margin-right: 7px;
+        }
+        @include limbo-max {
+          padding: 2rem 4rem;
+        }
+      }
+    }
+    @include limbo-only {
+      width: 100%;
+    }
+    @include tab-max {
+      order: 5;
+    }
+  }
+
+  .ud-contact-in-org {
+    .ud-contact-in-org-main-cont {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 4rem;
+      @include mob-only {
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+      @include tab-min {
+        justify-content: space-between;
+        flex-direction: row-reverse;
+      }
+      .il_edit_password_btn {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #505D68;
+        img {
+          margin-left: 7px;
+        }
+        @include mob-only {
+          font-size: 17px;
+        }
+        @include tab-max {
+          margin-top: 5px;
+          margin-bottom: 6px;
+        }
+      }
+      .ud-contact-in-org-title {
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--color-1);
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        svg {
+          margin-left: 8px;
+        }
+      }
+    }
+    .ud-contact-in-org-info-cont {
+      display: flex;
+      margin-bottom: 1.8rem;
+      div {
+        width: 50%;
+        text-align: right;
+        padding-right: 27px;
+        p {
+          margin-bottom: 0;
+          strong {
+            color: var(--color-1);
+            font-size: 600;
+          }
+        }
+        @include tab-max {
+          width: 100%;
+          text-align: center;
+          padding-right: 0;
+          margin-bottom: 9px;
+        }
+      }
+      @include tab-max {
+        flex-direction: column;
+        margin-bottom: 0;
+      }
+    }
+    @include limbo-only {
+      width: 100%;
+    }
+    @include tab-max {
+      order: 6;
+    }
+  }
+
+  .ud-emp-q-status {
+    display: flex;
+    flex-wrap: wrap;
+    .ud-emp-q-status-title {
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--color-1);
+      display: flex;
+      align-items: center;
+      margin-bottom: auto;
+      svg {
+        margin-left: 8px;
+      }
+    }
+    .ud-emp-q-status-title-info-cont {
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      margin-top: auto;
+      @include mob-only {
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+      @include limbo-max {
+        margin-top: 6rem;
+      }
+      div {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        p {
+          text-align: left;
+          margin-left: 8px;
+          margin-bottom: 0;
+          strong {
+            color: var(--color-1);
+            border-bottom: 3px solid var(--color-1);
+          }
+        }
+        &:nth-child(1) {
+          margin-left: 0;
+          img {
+            width: 3.8rem;
+            @include mob-only {
+              width: 4.8rem;
+            }
+          }
+          @include mob-only {
+            width: fit-content;
+          }
+        }
+        &:nth-child(2) {
+          margin-left: 2.5rem;
+          img {
+            width: 4.5rem;
+            @include mob-only {
+              width: 5.5rem;
+            }
+          }
+          @include mob-only {
+            width: fit-content;
+          }
+          @include limbo-only {
+            margin-left: 4rem;
+          }
+        }
+      }
+      .il_btn {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 1.4rem 2rem;
+        margin-left: auto;
+        align-items: center;
+        img {
+          margin-right: 7px;
+        }
+        @include mob-only {
+          margin: 40px auto 0 auto;
+        }
+        @include limbo-max {
+          padding: 2rem 4rem;
+        }
+      }
+    }
+    @include limbo-only {
+      width: 100%;
+    }
+    @include tab-max {
+      order: 7;
+    }
+  }
+
+  .ud-knowledge-area {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .ud-knowledge-area-col-1 {
+      width: 49%;
+      display: flex;
+      .il_inner_posts_container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        direction: ltr;
+        @include mob-only{
+            flex-direction: column;
+        }
+        article {
+            width: 48%;
+            background: #FFFFFF;
+            border-radius: 20px;
+            box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            @include mob-only {
+                width: 100%;
+                &:not(:last-of-type) {
+                    margin-bottom: 5rem;
+                }
+            }
+            @include limbo-only {
+                width: 48%;
+                &:nth-child(odd) {
+                    margin-right: 4%;
+                }
+            }
+            @include tab-only {
+                width: 48%;
+                &:nth-child(odd) {
+                    margin-right: 4%;
+                }
+            }
+            @include desk-min {
+                &:not(:last-of-type) {
+                    margin-right: 3%;
+                }
+            }
+            .article-container {
+                padding: 13px 20px 21px 20px;
+                @include limbo-max {
+                    padding: 14px 24px 21px 24px;
+                }
+            }
+            a {
+                text-decoration: none;
+                display: block;
+                img{
+                    width: 100%;
+                    height: 150px;
+                    object-fit: cover;
+                    @include mob-only {
+                        height: 35rem;
+                    }
+                    @include tab-max {
+                        height: 25rem;
+                    }
+                    @include limbo-only {
+                        height: 175px;
+                    }
+                }
+                .entry-title{
+                    color: #000;
+                    margin-bottom: 20px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    text-align: right;
+                    direction: rtl;
+                }
+                .entry_btn{
+                    color: var(--color-1);
+                    font-size: 15px;
+                    font-weight: 300;
+                    @include limbo-max {
+                        font-size: 16px;
+                    }
+                    svg {
+                        width: auto;
+                        height: 12px;
+                        margin-right: 5px;
+                        margin-bottom: -1px;
+                    }
+                }
+            }
+        }
+      }
+      @include limbo-max {
+        width: 100%;
+      }
+    }
+    .ud-knowledge-area-col-2 {
+      width: 49%;
+      display: flex;
+      flex-direction: column;
+      @include desk-min {
+        background: url("/wp-content/uploads/2024/01/ILLUS-1.png");
+        background-repeat: no-repeat;
+        background-size: 37rem 20.8rem;
+        background-position: bottom left;
+      }
+      .ud-knowledge-area-title {
+        font-size: 20px;
+        font-weight: 500;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        svg {
+          margin-left: 8px;
+        }
+      }
+      .ud-knowledge-area-text {
+        font-size: 16px;
+        color: #fff;
+        margin: 2rem 0 3.5rem 0;
+        @include desk-min {
+          max-width: 347px;
+        }
+      }
+      .il_btn {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 1.4rem 2rem;
+        margin-left: auto;
+        align-items: center;
+        height: fit-content;
+        img {
+          margin-right: 7px;
+        }
+        @include mob-only {
+          margin: 20px auto 0 auto;
+        }
+        @include limbo-max {
+          padding: 2rem 4rem;
+        }
+      }
+      @include limbo-max {
+        width: 100%;
+        margin-bottom: 6rem;
+      }
+    }
+    @include limbo-max {
+      flex-direction: column-reverse;
+    }
+    @include tab-max {
+      order: 8;
+    }
+  }
+
+  .ud-survey-results-top-buttons {
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    width: 100%;
+    margin-bottom: 2.5%;
+    @include mob-only {
+      flex-direction: column-reverse;
+    }
+    .il_btn {
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 1.4rem 2rem;
+      align-items: center;
+      border-radius: 6px;
+      background-color: #F1B122;
+      box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.12), 0px 4px 6px -1px rgba(0, 0, 0, 0.12);
+      img {
+        margin-right: 7px;
+      }
+      @include mob-only {
+        margin: 20px auto 0 auto;
+      }
+      @include limbo-max {
+        padding: 2rem 4rem;
+      }
+      &:hover {
+        background-color: var(--color-3);
+      }
+      @include tab-only {
+        order: 1;
+        width: fit-content;
+      }
+    }
+    .il_copy_emp_survey_link {
+      display: flex;
+      align-items: center;
+      color: #505D68;
+      img {
+        margin-right: 7px;
+      }
+      @include mob-only {
+        font-size: 17px;
+        margin: 5px auto 6px auto;
+      }
+      @include tab-max {
+        margin-top: 5px;
+        margin-bottom: 6px;
+      }
+      @include tab-only {
+        order: 3;
+        width: 100%;
+      }
+    }
+    #copyEmpSurveyLinkMessage {
+      display: none;
+      color: #fff;
+      background-color: #4CAF50;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      text-align: center;
+      position: fixed;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 50;
+      @include tab-max {
+        bottom: 50px;
+      }
+    }
+    .ud-survey-results-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-1);
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+      margin-left: auto;
+      svg {
+        margin-left: 8px;
+      }
+      @include mob-only {
+        font-size: 17px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include tab-only {
+        order: 2;
+        width: fit-content;
+      }
+    }
+    @include tab-max {
+      order: 9;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .graphs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100%;
+    .single-graph-container {
+      width: 49%;
+      padding: 20px;
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      direction: rtl;
+      margin-bottom: 2%;
+      @include tab-max {
+        width: 100%;
+        margin-bottom: 4rem;
+      }
+      @include limbo-max {
+        padding: 4rem;
+      }
+      @include sm-desk-only {
+        padding: 18px;
+      }
+      @include md-desk-only {
+        padding: 18px;
+      }
+      .single-graph-inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        h3 {
+          &:nth-child(1) {
+            width: 40px;
+          }
+          &:nth-child(2) {
+            width: calc(100% - 60px);
+          }
+        }
+      }
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--color-1);
+        text-align: right;
+      }
+      table {
+        thead {
+          display: none;
+        }
+        tbody {
+          tr {
+            td {
+              text-align: right;
+              font-size: 16px;
+              &:nth-child(1) {
+                width: calc(100% - 60px);
+              }
+              &:nth-child(2) {
+                width: 40px;
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(1), &:nth-child(2) {
+        h3 {
+          margin-bottom: -30px;
+          z-index: 50;
+          position: relative;
+        }
+      }
+    }
+    @include tab-max {
+      order: 10;
+    }
+  }
+
+  .ud-password-change-form {
+    background: #002D69;
+    padding: 7.3rem 0 7rem 0;
+    margin: -6rem 0 -4rem 0;
+    display: none;
+    .ud-password-change-form-inner {
+      width: var(--site-width);
+      max-width: var(--site-max-width);
+      margin: auto;
+      padding: 40px 20px 20px 20px;
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.05);
+      direction: rtl;
+      @include limbo-max {
+        padding: 4rem;
+      }
+      @include sm-desk-only {
+        padding: 36px 18px 18px 18px;
+      }
+      @include md-desk-only {
+        padding: 36px 18px 18px 18px;
+      }
+      .ud-password-change-form-title {
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--color-1);
+        display: flex;
+        align-items: center;
+        margin-bottom: 4rem;
+        svg {
+          margin-left: 8px;
+        }
+      }
+      .ud-password-change-form-main {
+        input {
+          padding: 8px 12px !important;
+          border-radius: 6px;
+          border: 1px solid #D9D9D9;
+        }
+        .frm_submit {
+          input {
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+            padding: 8px 13px;
+            border-radius: 6px;
+            border-color: transparent;
+            background: var(--color-3);
+            box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.12), 0px 4px 6px -1px rgba(0, 0, 0, 0.12);
+            &:hover {
+              background: var(--color-1);
+            }
+          }
+        }
+      }
+    }
+    @include tab-max {
+      order: 11;
+    }
+  }
+}

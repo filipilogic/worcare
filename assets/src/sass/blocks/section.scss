@@ -1,0 +1,995 @@
+.il_block.il_section {
+  padding-top: var(--b-space-top-ld);
+  padding-bottom: var(--b-space-bottom-ld);
+  padding-left: var(--b-space-left-ld);
+  padding-right: var(--b-space-right-ld);
+  @include limbo-max {
+    padding-top: var(--b-space-top-mt);
+    padding-bottom: var(--b-space-bottom-mt);
+    padding-left: var(--b-space-left-mt);
+    padding-right: var(--b-space-right-mt);
+  }
+  &.info-box-width-75 {
+    @include limbo-min {
+      .il_block_intro {
+        flex: 73% 0 0;
+      }
+      .right {
+        flex: 23% 0 0;
+      }
+    }
+  }
+  &.info-box-width-70 {
+    @include limbo-min {
+      .il_block_intro {
+        flex: 68% 0 0;
+      }
+      .right {
+        flex: 28% 0 0;
+      }
+    }
+  }
+  &.info-box-width-65 {
+    @include limbo-min {
+      .il_block_intro {
+        flex: 63% 0 0;
+      }
+      .right {
+        flex: 33% 0 0;
+      }
+    }
+  }
+  &.info-box-width-60 {
+    @include limbo-min {
+      .il_block_intro {
+        flex: 58% 0 0;
+      }
+      .right {
+        flex: 38% 0 0;
+      }
+    }
+  }
+  &.info-box-width-55 {
+    @include limbo-min {
+      .il_block_intro {
+        flex: 53% 0 0;
+      }
+      .right {
+        flex: 43% 0 0;
+      }
+    }
+  }
+  &.info-box-width-50 {
+    @include limbo-min {
+      .il_block_intro {
+        flex: 48% 0 0;
+      }
+      .right {
+        flex: 48% 0 0;
+      }
+    }
+  }
+  &.info-box-width-45 {
+    @include limbo-min {
+      .il_block_intro {
+        flex: 43% 0 0;
+      }
+      .right {
+        flex: 53% 0 0;
+      }
+    }
+  }
+  &.info-box-width-40 {
+    @include limbo-min {
+      .il_block_intro {
+        flex: 38% 0 0;
+      }
+      .right {
+        flex: 58% 0 0;
+      }
+    }
+  }
+}
+
+.il_section_inner {
+  padding-top: var(--b-inner-sec-space-top-ld);
+  padding-bottom: var(--b-inner-sec-space-bottom-ld);
+  padding-left: var(--b-inner-sec-space-left-ld);
+  padding-right: var(--b-inner-sec-space-right-ld);
+  @include limbo-max {
+    padding-top: var(--b-inner-sec-space-top-mt);
+    padding-bottom: var(--b-inner-sec-space-bottom-mt);
+    padding-left: var(--b-inner-sec-space-left-mt);
+    padding-right: var(--b-inner-sec-space-right-mt);
+  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  @include desk-min {
+    width: var(--custom-max-width-ld);
+  }
+  .il_block_bg {
+    z-index: -1;
+    overflow: hidden;
+    @include ab-bg;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
+    .desk_bg {
+      z-index: -1;
+      @include tab-max {
+        &.hide_desk_bg_mob {
+          display: none;
+        }
+      }
+    }
+    .mob_bg {
+      z-index: -1;
+      @include limbo-min {
+        display: none;
+      }
+    }
+    .bg_element {
+      position: absolute;
+      z-index: -1;
+      width: var(--bg-e-width-lg);
+      height: var(--bg-e-height-lg);
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin-left: var(--bg-e-left-lg);
+      margin-right: var(--bg-e-right-lg);
+      margin-top: var(--bg-e-top-lg);
+      margin-bottom: var(--bg-e-bottom-lg);
+      @include limbo-max {
+        width: var(--bg-e-width-mt);
+        height: var(--bg-e-height-mt);
+        margin-left: var(--bg-e-left-mt);
+        margin-right: var(--bg-e-right-mt);
+        margin-top: var(--bg-e-top-mt);
+        margin-bottom: var(--bg-e-bottom-mt);
+        display: var(--bg-e-display-mobile);
+      }
+      @include desk-min {
+        display: var(--bg-e-display-desktop);
+      }
+    }
+  }
+  > div {
+    flex: 48% 0 0;
+    position: relative;
+  }
+  &.ib-fullwidth {
+    > div {
+      flex-basis: 100%;
+    }
+    &.il_section_inner {
+      justify-content: center;
+    }
+  }
+  &.ib-custom-width {
+    @include limbo-max {
+      > div {
+        flex-basis: 100% !important;
+      }
+    }
+    @include desk-min {
+      &.content-align-left {
+        justify-content: flex-start;
+      }
+      &.content-align-center {
+        justify-content: center;
+      }
+      &.content-align-right {
+        justify-content: flex-end;
+      }
+    }
+  }
+  &.ib-left,  &.ib-right {
+    &.stack-mobile {
+      @include tab-max {
+        .il_block_intro {
+          flex-basis: 100%;
+        }
+        .right {
+          flex-basis: 100%;
+          img {
+            &.hide_sec_desk_img_mob {
+              display: none;
+            }
+          }
+        }
+      }
+      @include limbo-min {
+        .right {
+          img {
+            &.sec_mob_img {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    &.stack-tablet {
+      @include limbo-max {
+        .il_block_intro {
+          flex-basis: 100%;
+        }
+        .right {
+          flex-basis: 100%;
+          img {
+            &.hide_sec_desk_img_mob {
+              display: none;
+            }
+          }
+        }
+      }
+      @include desk-min {
+        .right {
+          img {
+            &.sec_mob_img {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.ib-left {
+    &.stack-mobile-reverse {
+      @include tab-max {
+        .il_block_intro {
+          order: 2;
+          flex-basis: 100%;
+        }
+        .right {
+          order: 1;
+          flex-basis: 100%;
+          img {
+            &.hide_sec_desk_img_mob {
+              display: none;
+            }
+          }
+        }
+      }
+      @include limbo-min {
+        .right {
+          img {
+            &.sec_mob_img {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    &.stack-tablet-reverse {
+      @include limbo-max {
+        .il_block_intro {
+          order: 2;
+          flex-basis: 100%;
+        }
+        .right {
+          order: 1;
+          flex-basis: 100%;
+          img {
+            &.hide_sec_desk_img_mob {
+              display: none;
+            }
+          }
+        }
+      }
+      @include desk-min {
+        .right {
+          img {
+            &.sec_mob_img {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.ib-right {
+    .il_block_intro {
+      order: 2;
+    }
+    .right {
+      order: 1;
+    }
+    &.stack-mobile-reverse {
+      @include tab-max {
+        .il_block_intro {
+          order: 1;
+          flex-basis: 100%;
+        }
+        .right {
+          order: 2;
+          flex-basis: 100%;
+          img {
+            &.hide_sec_desk_img_mob {
+              display: none;
+            }
+          }
+        }
+      }
+      @include limbo-min {
+        .right {
+          img {
+            &.sec_mob_img {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    &.stack-tablet-reverse {
+      @include limbo-max {
+        .il_block_intro {
+          order: 1;
+          flex-basis: 100%;
+        }
+        .right {
+          order: 2;
+          flex-basis: 100%;
+          img {
+            &.hide_sec_desk_img_mob {
+              display: none;
+            }
+          }
+        }
+      }
+      @include desk-min {
+        .right {
+          img {
+            &.sec_mob_img {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .right {
+    display: flex;
+    img {
+      width: var(--bg-e-width-lg);
+      height: var(--bg-e-height-lg);
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin-left: var(--bg-e-left-lg);
+      margin-right: var(--bg-e-right-lg);
+      margin-top: var(--bg-e-top-lg);
+      margin-bottom: var(--bg-e-bottom-lg);
+      @include limbo-max {
+        width: var(--bg-e-width-mt);
+        height: var(--bg-e-height-mt);
+        margin-left: var(--bg-e-left-mt);
+        margin-right: var(--bg-e-right-mt);
+        margin-top: var(--bg-e-top-mt);
+        margin-bottom: var(--bg-e-bottom-mt);
+      }
+    }
+  }
+}
+
+.not-a-caregiver-section {
+  p {
+    font-size: 2rem;
+    @include limbo-max {
+      font-size: 16px;
+    }
+  }
+  .nacs-first-div {
+    margin-top: 5rem;
+    color: var(--color-1);
+    @include limbo-max {
+      margin-top: 7.5rem;
+    }
+    strong {
+      font-weight: 600;
+    }
+  }
+  .nacs-lottie {
+    width: 14rem;
+    height: 14rem;
+    margin: 4rem auto;
+    @include limbo-max {
+      width: 20rem;
+      height: 20rem;
+      margin: 7.5rem auto;
+    }
+  }
+}
+
+.not-interested-caregiver-section {
+  p {
+    font-size: 2rem;
+    @include limbo-max {
+      font-size: 16px;
+    }
+  }
+  .nic-first-div {
+    margin-top: 5rem;
+    color: var(--color-1);
+    @include limbo-max {
+      margin-top: 7.5rem;
+    }
+    strong {
+      font-weight: 600;
+    }
+  }
+  .nic-lottie {
+    width: 19.2rem;
+    height: 19.2rem;
+    margin: 4rem auto;
+    @include limbo-max {
+      width: 25rem;
+      height: 25rem;
+      margin: 7.5rem auto;
+    }
+  }
+  .il_btn {
+    padding: 1.4rem 2.8rem;
+    align-items: center;
+    font-weight: 600;
+    img {
+      width: 20px;
+      margin-left: 8px;
+    }
+    @include limbo-max {
+      padding: 2rem 4.8rem;
+      font-size: 14px;
+    }
+  }
+  .nic-last-div {
+    a {
+      font-size: 2rem;
+      color: var(--color-text);
+      @include limbo-max {
+        font-size: 16px;
+      }
+    }
+    strong {
+      color: var(--color-1);
+      font-weight: 600;
+    }
+  }
+}
+
+.employee-caregiver-thank-you-section {
+  p {
+    font-size: 2rem;
+    @include limbo-max {
+      font-size: 16px;
+    }
+  }
+  .ecty-first-div {
+    margin-top: 5rem;
+    color: var(--color-1);
+    @include limbo-max {
+      margin-top: 7.5rem;
+    }
+    strong {
+      font-weight: 600;
+    }
+  }
+  .ecty-lottie {
+    width: 24.7rem;
+    height: 24.7rem;
+    margin: 2rem auto 4rem auto;
+    @include limbo-max {
+      width: 30rem;
+      height: 30rem;
+      margin: 5rem auto 7rem auto;
+    }
+  }
+  .il_btn {
+    padding: 1.4rem 2.8rem;
+    align-items: center;
+    font-weight: 600;
+    img {
+      width: 20px;
+      margin-left: 8px;
+    }
+    @include limbo-max {
+      padding: 2rem 4.8rem;
+      font-size: 14px;
+    }
+  }
+  .ecty-last-div {
+    a {
+      font-size: 2rem;
+      color: var(--color-text);
+      @include limbo-max {
+        font-size: 16px;
+      }
+    }
+    strong {
+      color: var(--color-1);
+      font-weight: 600;
+    }
+  }
+}
+
+.ty-newsletter-form-section {
+  .il_section_inner {
+    border-radius: 20px;
+    box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+  }
+}
+
+.login-screen-section, .reset-password-section {
+  label, .frm_checkbox {
+    text-align: right !important;
+  }
+  .il_section_inner {
+    @include mob-only {
+        min-height: calc(100vh - 13.2rem);
+    }
+    @include tab-only {
+        min-height: calc(100vh - 23.5rem);
+    }
+    @include limbo-only {
+        min-height: calc(100vh - 23.5rem);
+    }
+    @include desk-min {
+        min-height: calc(100vh - 17.2rem);
+        max-width: 50%;
+        width: 50%;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .il_block_intro {
+      max-width: 370px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+      .frm_form_fields {
+        display: flex;
+        flex-direction: column;
+        .frm_description {
+          p {
+            text-align: right;
+          }
+        }
+        .frm_form_field:not(.login-remember) {
+          .frm_primary_label {
+            margin-bottom: 4px;
+            color: #0F0F0F;
+            font-size: 16px;
+            direction: rtl;
+          }
+          input {
+            padding: 8px 12px !important;
+            border-radius: 6px;
+            border: 1px solid #D9D9D9;
+          }
+        }
+        .frm_submit {
+          input {
+            font-size: 16px;
+            font-weight: 500;
+            color: #fff;
+            padding: 8px 13px;
+            border-radius: 6px;
+            border-color: transparent;
+            background: var(--color-3);
+            box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.12), 0px 4px 6px -1px rgba(0, 0, 0, 0.12);
+            &:hover {
+              background: var(--color-1);
+            }
+          }
+        }
+        .login-remember {
+          margin-bottom: 14px;
+          label {
+            width: 100%;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+            color: #0F0F0F;
+            font-size: 15px;
+            input[type=checkbox] {
+              margin-left: 5px;
+              margin-right: 0;
+            }
+          }
+        }
+        .login_lost_pw {
+          text-align: right;
+          margin-bottom: 0 !important;
+          direction: rtl !important;
+          a {
+            color: #8392AB;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hp-hero-section {
+  @include limbo-only {
+    .il_block_bg {
+      .desk_bg {
+        display: none;
+      }
+      .mob_bg {
+        display: block;
+      }
+    }
+  }
+  .intro_text {
+    @include limbo-max {
+      max-width: 500px;
+      margin-left: auto;
+    }
+    @include desk-min {
+      max-width: 57rem;
+      margin-left: auto;
+    }
+  }
+  .buttons {
+    .il_btn {
+      @include limbo-max {
+        &:nth-child(1) {
+          border: 1px solid var(--color-3);
+          &:hover {
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+          }
+        }
+        &:nth-child(2) {
+          background-color: transparent;
+          color: #fff;
+          border: 1px solid #fff;
+          &:hover {
+            background-color: var(--color-3);
+            border: 1px solid var(--color-3);
+          }
+        }
+      }
+      @include desk-min {
+        font-size: 2rem;
+        padding: 1.2rem 3.6rem;
+        &:nth-child(1) {
+          background-color: transparent;
+          color: #fff;
+          border: 1px solid #fff;
+          &:hover {
+            background-color: var(--color-3);
+            border: 1px solid var(--color-3);
+          }
+        }
+        &:nth-child(2) {
+          border: 1px solid var(--color-3);
+          &:hover {
+            background-color: transparent;
+            color: #fff;
+            border: 1px solid #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hp-section-3 {
+  .il_block_intro {
+    background: url('/wp-content/uploads/2024/01/Rectangle-367.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+    .intro_subtitle {
+      font-weight: 300;
+    }
+    .intro_text {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      .hp-section-3-single {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 20px;
+        margin-bottom: 20px;
+        @include limbo-max {
+          font-size: 16px;
+        }
+        .hp-section-3-single-number {
+          font-size: 5.8rem;
+          font-weight: 600;
+          margin-left: 13px;
+          @include limbo-max {
+            font-size: 35px;
+          }
+        }
+        &:nth-child(1) {
+          width: 40%;
+          @include tab-max {
+            width: 100%;
+          }
+        }
+        &:nth-child(2) {
+          width: 40%;
+          @include tab-max {
+            width: 100%;
+          }
+        }
+        &:nth-child(3) {
+          width: 40%;
+          @include tab-max {
+            width: 100%;
+          }
+        }
+        &:nth-child(4) {
+          width: 50%;
+          @include tab-max {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hp-section-4 {
+  .intro_title {
+    max-width: 650px;
+    margin-left: auto;
+    span {
+      font-size: 4rem;
+      @include limbo-max {
+        font-size: 30px;
+      }
+    }
+  }
+  .intro_text {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    .hp-section-4-single {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      align-items: center;
+      width: calc(50% - 5px);
+      padding: 24px;
+      border-radius: 10px;
+      background: #FFF;
+      box-shadow: 0px 16px 24px 0px rgba(96, 97, 112, 0.12), 0px 2px 8px 0px rgba(40, 41, 61, 0.02);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      @include tab-max {
+        width: 100%;
+        padding: 24px 20px;
+      }
+      @include limbo-max {
+        font-size: 16px;
+      }
+      img {
+        margin-left: 10px;
+        width: 5.5rem;
+        @include tab-max {
+          width: 6.5rem;
+        }
+      }
+    }
+  }
+}
+
+.hp-section-5 {
+  background: linear-gradient(273deg, #002D69 8.72%, #043E8B 87.84%);
+}
+
+.hp-bg-group {
+  background: url('/wp-content/uploads/2024/01/Group-333.svg');
+  background-size: cover;
+
+  .hp-testimonial-section {
+    .intro_text {
+      width: 486px;
+      margin-left: auto;
+      margin-right: 16rem;
+      @include limbo-max {
+        width: 64rem;
+        margin-right: 30px;
+      }
+      @include mob-only {
+        margin-right: 0;
+      }
+      .hp-single-testimonial {
+        padding: 23px 31px 23px 31px;
+        background: #F1B122;
+        width: 100%;
+        font-size: 20px;
+        @include limbo-max {
+          font-size: 16px;
+        }
+        .hp-single-testimonial-name {
+          margin-bottom: 0;
+          font-weight: 600;
+          font-size: 20px;
+          @include limbo-max {
+            font-size: 16px;
+          }
+        }
+        &:before {
+          content: url('/wp-content/uploads/2024/01/quote-icon.png');
+          display: block;
+          text-align: left;
+          margin-bottom: 10px;
+        }
+      }
+      .flickity-page-dots {
+        display: flex;
+        padding-right: 0;
+        bottom: -30px;
+      }
+      &:after {
+          content: 'flickity';
+          display: none;
+      }
+    }
+  }
+
+  .hp-cols-in-group {
+    .il_block_bg {
+      overflow: visible;
+    }
+    .column {
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      background: #FFF;
+      box-shadow: 0px 16px 24px 0px rgba(96, 97, 112, 0.12), 0px 2px 8px 0px rgba(40, 41, 61, 0.02);
+      padding: 20px 24px;
+      h3 {
+        margin-bottom: 0;
+      }
+      img {
+        margin-left: 8px;
+      }
+      @include desk-min {
+        &:nth-child(1) {
+          width: 38%;
+        }
+        &:nth-child(2) {
+          width: 30.5%;
+        }
+        &:nth-child(3) {
+          width: 30.5%;
+        }
+        &:nth-child(4) {
+          width: 33%;
+          margin-top: 0.5%;
+        }
+        &:nth-child(5) {
+          width: 33%;
+          margin-top: 0.5%;
+        }
+        &:nth-child(6) {
+          width: 33%;
+          margin-top: 0.5%;
+        }
+      }
+    }
+    @include limbo-max {
+      .flickity-viewport {
+        overflow: visible;
+      }
+    }
+  }
+}
+
+.home-contact-us {
+  & > .il_block_bg {
+    background: linear-gradient(273deg, #002D69 8.72%, #043E8B 87.84%);
+    margin-top: 26rem;
+  }
+  .il_section_inner {
+    border-radius: 20px;
+    box-shadow: 0px 20px 27px 0px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    margin-top: -30rem;
+    @include limbo-min {
+      .wpcf7-form {
+        p {
+          margin-bottom: 17px;
+        }
+        .cf7-submit-btn {
+          margin-top: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+.lp-ty-section {
+  @include limbo-max {
+    .intro_text {
+      img {
+        width: 20rem;
+      }
+    }
+  }
+}
+
+.employer-thank-you-section {
+  background: #D7DDE6;
+  position: relative;
+  @include mob-only {
+      min-height: calc(100vh - 13.2rem);
+  }
+  @include tab-only {
+      min-height: calc(100vh - 23.5rem);
+  }
+  @include limbo-only {
+      min-height: calc(100vh - 23.5rem);
+  }
+  @include desk-min {
+      min-height: calc(100vh - 17.2rem);
+  }
+  @include limbo-min {
+      background: url('/wp-content/uploads/2024/02/new-bg-1.svg');
+      background-position: top right;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 6rem 0;
+      overflow: hidden;
+  }
+  .intro_text {
+    .emp-ty-first-p {
+      margin-bottom: 5px;
+    }
+    .emp-ty-badge-text {
+      font-size: 2.8rem;
+      font-weight: 500;
+      color: var(--color-1);
+      margin-bottom: 5px;
+      @include limbo-max {
+        font-size: 22px;
+      }
+    }
+    .il_btn {
+      padding: 1.4rem 2.8rem;
+      align-items: center;
+      font-weight: 600;
+      margin-bottom: 11rem;
+      img {
+        width: 18px;
+        margin-left: 8px;
+      }
+      @include limbo-max {
+        padding: 2rem 4.8rem;
+        font-size: 14px;
+      }
+    }
+    .emp-ty-last-p {
+      font-size: 16px;
+      color: #505D68;
+      a {
+        font-size: 16px;
+        color: #505D68;
+      }
+    }
+  }
+}

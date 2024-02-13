@@ -1,0 +1,7 @@
+.intro_title, .intro_subtitle, .intro_text, .il_btn, ul li a, .column, input:not(.wpcf7-submit), select, textarea, input:not(.wpcf7-submit)::placeholder, .wpcf7 input[type="url"], .wpcf7 input[type="email"], .wpcf7 input[type="tel"] select::placeholder, textarea::placeholder {
+  direction: rtl;
+}
+
+.footer_col_1.column, .footer_col_2.column {
+  direction: ltr;
+}
