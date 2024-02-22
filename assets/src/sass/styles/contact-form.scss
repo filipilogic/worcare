@@ -101,4 +101,30 @@
     .wpcf7-spinner {
         display: none;
     }
+    @include mob-only {
+        .cf7-order-1-mob {
+            order: 1;
+        }
+        .cf7-order-1-mob {
+            order: 2;
+        }
+        .cf7-order-3-mob {
+            order: 3;
+        }
+        .cf7-order-1-mob {
+            order: 4;
+        }
+        .cf7-order-1-mob {
+            order: 5;
+        }
+        .cf7-order-6-mob {
+            order: 6;
+        }
+        .cf7-order-7-mob {
+            order: 7;
+        }
+        .cf7-order-8-mob {
+            order: 7;
+        }
+    }
   }

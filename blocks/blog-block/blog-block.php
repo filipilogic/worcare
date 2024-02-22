@@ -123,7 +123,7 @@ if( $custom_padding ) {
                         ?>
 
                         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                            <a href="<?php echo $external_link; ?>">
+                            <a href="<?php echo $external_link; ?>" target="_blank">
                                 <?php
                                 $homepage_image = get_field('homepage_image', get_the_ID());
                                 if ( $show_homepage_image && $homepage_image ) {

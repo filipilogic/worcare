@@ -74,9 +74,9 @@
       flex-wrap: wrap;
       justify-content: space-between;
       text-align: right;
-      padding: 1.25rem 10rem 0.5rem 6rem;
+      padding: 0 10rem 0.5rem 6rem;
       @include tab-max {
-        padding: 1.5rem 10rem 1rem 6rem;
+        padding: 0 10rem 1rem 6rem;
       }
       p {
         font-size: 2rem;
@@ -159,11 +159,6 @@
           width: 35%;
           text-align: right;
         }
-      }
-    }
-    &.open {
-      .il_accordion-header {
-        margin-bottom: 5px;
       }
     }
     &:nth-child(1) {

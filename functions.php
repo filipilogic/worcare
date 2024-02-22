@@ -435,69 +435,7 @@ function custom_post_navigation_shortcode() {
 // Register the shortcode
 add_shortcode('post_navigation_shortcode', 'custom_post_navigation_shortcode');
 
-// Add the Company Name field to the user profile page
-function my_custom_user_profile_fields( $user ) {
-    ?>
-    <h3>Company Information</h3>
-    <table class="form-table">
-        <tr>
-            <th><label for="company_name">Company Name</label></th>
-            <td>
-                <input type="text" name="company_name" id="company_name" value="<?php echo esc_attr( get_user_meta( $user->ID, 'company_name', true ) ); ?>" class="regular-text" style="background-color: #f4f4f4; color: #777; border: 1px solid #ddd; cursor: not-allowed;" readonly />
-            </td>
-        </tr>
-        <tr>
-            <th><label for="employee_survey_enabled">Employee Survey Enabled</label></th>
-            <td>
-                <input type="checkbox" name="employee_survey_enabled" id="employee_survey_enabled" <?php checked( get_user_meta( $user->ID, 'employee_survey_enabled', true ), 'yes' ); ?> />
-            </td>
-        </tr>
-    </table>
-    <?php
-}
-
-add_action( 'show_user_profile', 'my_custom_user_profile_fields' );
-add_action( 'edit_user_profile', 'my_custom_user_profile_fields' );
-
-// Save the Company Name field when the user profile is updated
-function my_save_user_profile_fields( $user_id ) {
-    if ( current_user_can( 'edit_user', $user_id ) ) {
-        update_user_meta( $user_id, 'company_name', sanitize_text_field( $_POST['company_name'] ) );
-        update_user_meta( $user_id, 'employee_survey_enabled', isset( $_POST['employee_survey_enabled'] ) ? 'yes' : 'no' );
-    }
-}
-
-add_action( 'personal_options_update', 'my_save_user_profile_fields' );
-add_action( 'edit_user_profile_update', 'my_save_user_profile_fields' );
-
-// Add the Company Name field to the new user form
-function my_custom_user_new_form() {
-    ?>
-    <h3>Company Information</h3>
-    <table class="form-table">
-        <tr>
-            <th><label for="company_name">Company Name</label></th>
-            <td>
-                <input type="text" name="company_name" id="company_name" value="" class="regular-text" />
-            </td>
-        </tr>
-        <tr>
-            <th><label for="employee_survey_enabled">Employee Survey Enabled</label></th>
-            <td>
-                <input type="checkbox" name="employee_survey_enabled" id="employee_survey_enabled" />
-            </td>
-        </tr>
-    </table>
-    <?php
-}
-
-add_action( 'user_new_form', 'my_custom_user_new_form' );
-
 function create_form_on_user_register( $user_id ) {
-    if ( current_user_can( 'edit_user', $user_id ) ) {
-        update_user_meta( $user_id, 'company_name', sanitize_text_field( $_POST['company_name'] ) );
-    }
-
 	$user = get_userdata( $user_id );
 
 	if (in_array('contributor', $user->roles)) {
@@ -529,31 +467,6 @@ function create_form_on_user_register( $user_id ) {
 }
 
 add_action( 'user_register', 'create_form_on_user_register' );
-
-
-function update_user_meta_on_form_submit($entry_id, $form_id) {
-    if ($form_id == 45) {
-
-        $user_id = $_POST['item_meta'][5679];
-
-        if ($user_id) {
-            $total = $_POST['item_meta'][1961];
-            update_user_meta($user_id, 'badge_value_total', $total);
-			$c_in_org_full_name = $_POST['item_meta'][1945];
-            update_user_meta($user_id, 'c_in_org_full_name', $c_in_org_full_name);
-			$c_in_org_phone = $_POST['item_meta'][1946];
-            update_user_meta($user_id, 'c_in_org_phone', $c_in_org_phone);
-			$c_in_org_function = $_POST['item_meta'][1948];
-            update_user_meta($user_id, 'c_in_org_function', $c_in_org_function);
-			$c_in_org_email = $_POST['item_meta'][1947];
-            update_user_meta($user_id, 'c_in_org_email', $c_in_org_email);
-        }
-
-    }
-}
-
-add_action('frm_after_create_entry', 'update_user_meta_on_form_submit', 10, 2);
-add_action('frm_after_update_entry', 'update_user_meta_on_form_submit', 10, 2);
 
 function redirect_to_login_if_not_logged_in() {
     // Check if the user is not logged in and the current page is with ID 46
@@ -648,7 +561,7 @@ function add_login_logout_link_to_menu( $items, $args ) {
             $items = $logout_link . $items;
         } else {
             // If not logged in, add a login link
-            $login_link = '<li class="menu-item login-logout-link"><a href="' . wp_login_url( get_permalink() ) . '"><img src="/wp-content/uploads/2024/02/login-icon.svg"> יציאה</a></li>';
+            $login_link = '<li class="menu-item login-logout-link"><a href="' . wp_login_url( get_permalink() ) . '"><img src="/wp-content/uploads/2024/02/login-icon.svg"> כניסה</a></li>';
             $items = $login_link . $items;
         }
     }
@@ -656,8 +569,15 @@ function add_login_logout_link_to_menu( $items, $args ) {
 }
 add_filter( 'wp_nav_menu_items', 'add_login_logout_link_to_menu', 10, 2 );
 
-function my_myme_types( $mime_types ) {
-	$mime_types['rar'] = 'application/x-rar';
-	return $mime_types;
+function add_allow_upload_extension_exception( $types, $file, $filename, $mimes ) {
+    // Do basic extension validation and MIME mapping
+    $wp_filetype = wp_check_filetype( $filename, $mimes );
+    $ext         = $wp_filetype['ext'];
+    $type        = $wp_filetype['type'];
+    if( in_array( $ext, array( 'zip', 'rar' ) ) ) {
+        $types['ext'] = $ext;
+        $types['type'] = $type;
+    }
+    return $types;
 }
-//add_filter( 'upload_mimes', 'my_myme_types', 1, 1 );
+add_filter( 'wp_check_filetype_and_ext', 'add_allow_upload_extension_exception', 99, 4 );

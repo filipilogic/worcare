@@ -115,10 +115,10 @@ if ( $field_ids ) {
 	<div class="ud-width-1_4 ud-dl-badges <?php if ( ! $badge_value_total ) { echo 'ud-blurred'; } ?>">
 		<div class="ud-dl-badges-top"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none"><path d="M14.9743 11.0335H9.50884C8.19028 11.0335 7.11768 9.96087 7.11768 8.64232V1.81043C7.11768 1.24475 7.57678 0.785645 8.14246 0.785645H16.3407C16.9064 0.785645 17.3655 1.24475 17.3655 1.81043V8.64232C17.3655 9.96087 16.2929 11.0335 14.9743 11.0335ZM9.16724 2.83521V8.64232C9.16724 8.83088 9.32028 8.98391 9.50884 8.98391H14.9743C15.1629 8.98391 15.3159 8.83088 15.3159 8.64232V2.83521H9.16724Z" fill="white"/><path d="M20.4397 0.785645H4.04318C1.97039 0.785645 0.285645 2.47039 0.285645 4.54318V20.9397C0.285645 23.0125 1.97039 24.6973 4.04318 24.6973H20.4397C22.5125 24.6973 24.1973 23.0125 24.1973 20.9397V4.54318C24.1973 2.47039 22.5125 0.785645 20.4397 0.785645ZM22.1477 20.9397C22.1477 21.8811 21.3811 22.6477 20.4397 22.6477H4.04318C3.10175 22.6477 2.33521 21.8811 2.33521 20.9397V4.54318C2.33521 3.60175 3.10175 2.83521 4.04318 2.83521H20.4397C21.3811 2.83521 22.1477 3.60175 22.1477 4.54318V20.9397ZM10.5335 18.207C10.5335 18.7726 10.0744 19.2317 9.50869 19.2317H6.77594C6.21026 19.2317 5.75115 18.7726 5.75115 18.207C5.75115 17.6413 6.21026 17.1822 6.77594 17.1822H9.50869C10.0744 17.1822 10.5335 17.6413 10.5335 18.207Z" fill="white"/></svg> תו תקן ארגוני</div>
 		<p>לנוחיותכם, באפשרותכם להוריד את חבילת  קבצי תו התקן בפורמטים שונים לשימוש והטמעה לפי הצורך.</p>
-		<?php if ( ! $badge_value_total ) { ?><a class="il_btn button-hover-color-green" href="#" target="_self">לצפייה במדיניות הארגון <img src="/wp-content/uploads/2024/01/dl-button-icon.png"></a><?php var_dump($badge_value_total); } ?>
-		<?php if ( $badge_value_total > 0 && $badge_value_total < 25 ) { ?><a class="il_btn button-hover-color-green" href="/wp-content/uploads/2024/02/Supportive.rar" target="_self">לצפייה במדיניות הארגון <img src="/wp-content/uploads/2024/01/dl-button-icon.png"></a><?php } ?>
-		<?php if ( $badge_value_total >= 25 && $badge_value_total < 500  ) { ?><a class="il_btn button-hover-color-green" href="/wp-content/uploads/2024/02/Empowering.rar" target="_self">לצפייה במדיניות הארגון <img src="/wp-content/uploads/2024/01/dl-button-icon.png"></a><?php } ?>
-		<?php if ( $badge_value_total >= 500  ) { ?><a class="il_btn button-hover-color-green" href="/wp-content/uploads/2024/02/Ambassador.rar" target="_self">לצפייה במדיניות הארגון <img src="/wp-content/uploads/2024/01/dl-button-icon.png"></a><?php } ?>
+		<?php if ( ! $badge_value_total ) { ?><a class="il_btn button-hover-color-green" href="#" target="_self">לצפייה במדיניות הארגון <img src="/wp-content/uploads/2024/01/dl-button-icon.png"></a><?php } ?>
+		<?php if ( $badge_value_total > 0 && $badge_value_total < 25 ) { ?><a class="il_btn button-hover-color-green" href="/wp-content/uploads/2024/02/Supportive.rar" target="_self">להורדת קבצים - תו תקן <img src="/wp-content/uploads/2024/01/dl-button-icon.png"></a><?php } ?>
+		<?php if ( $badge_value_total >= 25 && $badge_value_total < 500  ) { ?><a class="il_btn button-hover-color-green" href="/wp-content/uploads/2024/02/Empowering.rar" target="_self">להורדת קבצים - תו תקן <img src="/wp-content/uploads/2024/01/dl-button-icon.png"></a><?php } ?>
+		<?php if ( $badge_value_total >= 500  ) { ?><a class="il_btn button-hover-color-green" href="/wp-content/uploads/2024/02/Ambassador.rar" target="_self">להורדת קבצים - תו תקן <img src="/wp-content/uploads/2024/01/dl-button-icon.png"></a><?php } ?>
 	</div>
 
 	<div class="ud-width-2_4 ud-corp-charter <?php if ( ! $badge_value_total ) { echo 'ud-blurred'; } ?>">
@@ -150,7 +150,7 @@ if ( $field_ids ) {
 		</div>
 	</div>
 
-	<div class="ud-width-2_4 ud-emp-q-status <?php if ( ! $badge_value_total || $total_entries == 0 ) { echo 'ud-blurred'; } ?>">
+	<div class="ud-width-2_4 ud-emp-q-status <?php if ( ! $badge_value_total ) { echo 'ud-blurred'; } ?>" <?php if ( $badge_value_total && $total_entries == 0 ) { echo 'id="ud-zero-entries"'; } ?>>
 		<p class="ud-emp-q-status-title"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">  <circle cx="9" cy="9.521" r="9" fill="#F9B142"/></svg> סטאטוס שאלון עובדים</p>
 		
 		<div class="ud-emp-q-status-title-info-cont">
@@ -168,6 +168,7 @@ if ( $field_ids ) {
 						'post_type'      => 'post',
 						'post_status'    => 'publish',
 						'posts_per_page' => 2,
+						'category_name'  => 'user-dashboard-posts',
 					);
 					
 					$posts = new WP_Query( $args );
@@ -181,7 +182,7 @@ if ( $field_ids ) {
 							?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-								<a href="<?php echo $external_link; ?>">
+								<a href="<?php echo $external_link; ?>" target="_blank">
 									<?php
 										the_post_thumbnail( array(508, 250) );
 									?>
@@ -206,11 +207,11 @@ if ( $field_ids ) {
 		<div class="ud-knowledge-area-col-2">
 			<p class="ud-knowledge-area-title"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">  <circle cx="9" cy="9.521" r="9" fill="#979CE8"/></svg> איזור ידע</p>
 			<p class="ud-knowledge-area-text">לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים גם דמי טקסט או ג'יבריש - ומיועד להיות ממוקם בסקיצות עיצוביות - של עלונים, מגזינים, מודעות, אתרי אינטרנט וכו'.</p>
-			<a class="il_btn button-color-pink" href="#" target="_self">לתכנים נוספים <img src="/wp-content/uploads/2024/01/direct-EDIT-1.png"></a>
+			<a class="il_btn button-color-pink" href="https://caregivers.org.il/library/" target="_blank">לתכנים נוספים <img src="/wp-content/uploads/2024/01/direct-EDIT-1.png"></a>
 		</div>
 	</div>
 
-	<?php if( $employee_survey_enabled === 'yes' ) { ?>
+	<?php if( $employee_survey_enabled ) { ?>
 		<div class="ud-survey-results-top-buttons">
 			<?php if( $total_entries > 0 ) { ?><a class="il_btn" href="/wp-admin/admin-ajax.php?frm_action=0&action=frm_entries_csv&form=<?php echo $form_id; ?>" target="_self">להורדת נתונים ב-CSV <img src="/wp-content/uploads/2024/01/dl-button-icon-small.png"></a><?php } ?>
 				<?php
@@ -218,16 +219,16 @@ if ( $field_ids ) {
 					$formatted_company_name = str_replace(" ", "-", $formatted_company_name);
 				?>
 			<a class="il_copy_emp_survey_link" id="copyEmpSurveyLink" href="<?php echo '/' . $formatted_company_name . '-employee-survey'; ?>" target="_self">העתקת לינק לשאלון עובדים <img src="/wp-content/uploads/2024/01/direct-EDIT-2.png"></a>
-			<div id="copyEmpSurveyLinkMessage">הקישור הועתק ללוח</div>
+
 			<?php if( $total_entries > 0 ) { ?><p class="ud-survey-results-title"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">  <circle cx="9" cy="9.521" r="9" fill="#D84379"/></svg> תוצאות השאלון</p><?php } ?>
 		</div>
 	<?php } ?>
 
-	<?php if( $employee_survey_enabled === 'yes' && $total_entries > 0 ) { ?>
+	<?php if( $employee_survey_enabled && $total_entries > 0 ) { ?>
 		<div id="graphs-container" class="graphs-container">
 			<div class="single-graph-container">
 				<h3>אני מטפל ומסייע ל:</h3>
-				<?php echo do_shortcode('[frm-graph fields="' . $field_ids[1] . '" width="100%" chart_area="width:90%, height:60%" type="pie" pie_hole=".4" title="" show_key="1" legend_position="bottom" legend_size="14" colors="#6C25B8, #A456F7, #2F51CA, #7EA9E9, #1386EF, #5385F7, #D030CC, #ED6095"]'); ?>
+				<?php echo do_shortcode('[frm-graph fields="' . $field_ids[0] . '" width="100%" chart_area="width:90%, height:60%" type="pie" pie_hole=".4" title="" show_key="1" legend_position="bottom" legend_size="14" colors="#6C25B8, #A456F7, #2F51CA, #7EA9E9, #1386EF, #5385F7, #D030CC, #ED6095"]'); ?>
 			</div>
 			
 			<div class="single-graph-container">
@@ -285,6 +286,8 @@ if ( $field_ids ) {
 		</div>
 	<?php } ?>
 	<div id="triggerTextMessage">על מנת לקבל גישה לאמנה הארגונית, תו תקן, חבילת תקשורת שיווקית וסקר העובדים עליך ראשית להשלים את יצירת האמנה הארגונית</div>
+	<div id="ud-zero-entries-message">לאחר מילוי הסקר על ידי עובדי הארגון תוכל לצפות בתוצאות הסקר.</div>
+	<div id="copyEmpSurveyLinkMessage">הקישור הועתק ללוח</div>
 </div>
 
 <div class="ud-password-change-form">

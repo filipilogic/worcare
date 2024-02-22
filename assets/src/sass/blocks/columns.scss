@@ -147,31 +147,53 @@
 }
 
 .hp-badges-section {
-  &.flickity-on-smaller {
-    .il_columns_inner {
-      .column {
-        border-radius: 10px;
-        background: #FFF;
-        box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.08);
-        padding: 6rem 0;
-        @include mob-only {
-          width: 70% !important;
+  .il_columns_inner {
+    .column {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: #FFF;
+      box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.08);
+      padding: 6rem 0;
+      .il_col_text {
+        display: none;
+      }
+      @include mob-only {
+        max-width: 275px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include limbo-max {
+        padding: 5rem 0;
+        img {
+          width: 35rem;
         }
-        @include tab-only {
-          width: 50% !important;
-        }
+      }
+      &:hover {
+        background: var(--color-1);
+        padding: 2.3rem 2.8rem;
         @include limbo-max {
-          padding: 5rem 0;
-          img {
-            width: 35rem;
+          padding: 24px 20px;
+        }
+        .il_col_text {
+          display: block;
+          p {
+            margin-bottom: 0;
+            @include tab-max {
+              font-size: 14px;
+            }
+          }
+        }
+        img {
+          display: none;
+          &.checkmark-image {
+            display: block;
+            width: fit-content;
+            margin: 0 auto 12px auto;
           }
         }
       }
-    }
-  }
-  @include limbo-max {
-    .flickity-viewport {
-      overflow: visible;
     }
   }
 }

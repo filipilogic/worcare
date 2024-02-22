@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 	var copyLink = document.getElementById('copyEmpSurveyLink');
+	var zeroEntriesMessageDiv = document.getElementById('ud-zero-entries');
 	var triggerTextCollection = document.getElementsByClassName('ud-blurred');
 
 	// Attach click event listener
@@ -34,6 +35,22 @@ document.addEventListener('DOMContentLoaded', function() {
 		  setTimeout(function() {
 			copyMessage.style.display = 'none';
 		  }, 3000);
+		});
+	}
+
+	// Attach click event listener
+	if ( zeroEntriesMessageDiv ) {
+		zeroEntriesMessageDiv.addEventListener('click', function(event) {
+            // Prevent the default behavior of the link
+            event.preventDefault();
+
+            var zeroEntriesMessage = document.getElementById('ud-zero-entries-message');
+            zeroEntriesMessage.style.display = 'block';
+
+            // Hide the message after a short delay
+            setTimeout(function() {
+                zeroEntriesMessage.style.display = 'none';
+            }, 3000);
 		});
 	}
 

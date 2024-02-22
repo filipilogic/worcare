@@ -11,6 +11,10 @@
             margin-bottom: 0;
         }
     }
+    .frm_error_style {
+        direction: rtl;
+        text-align: right;
+    }
     .employer-form {
         background: url('/wp-content/uploads/2023/12/Bg-Element-2.png'), #fff;
         background-position: top right;
@@ -96,6 +100,7 @@
             width: 47rem;
             height: auto;
             z-index: 0;
+            transform: scaleX(-1);
             @include tab-max {
                 display: none;
             }
@@ -673,24 +678,6 @@
             }
         }
         
-        .frm-page-4-first-text {
-            strong {
-                a {
-                    text-decoration: none;
-                }
-            }
-        }
-
-        .employer-page-4-lottie {
-            width: 18rem;
-            height: auto;
-            margin: 6rem auto 0 auto;
-            @include tab-max {
-                width: 32rem;
-                margin-top: 7.5rem;
-            }
-        }
-        
         .frm-checkboxes-page-5 {
             @include desk-min {
                 margin-top: 1rem;
@@ -699,16 +686,6 @@
         
         .frm-checkboxes-page-6 {
             margin-top: 2rem;
-        }
-        
-        .employer-page-7-lottie {
-            width: 18rem;
-            height: auto;
-            margin: 6rem auto 0 auto;
-            @include tab-max {
-                width: 32rem;
-                margin-top: 7.5rem;
-            }
         }
         
         .employer-page-8-boxes {
