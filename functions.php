@@ -533,7 +533,7 @@ function badge_shortcode_output() {
     $user_id = get_current_user_id();
 
     // Get the badge value total for the user
-    $badge_value_total = get_user_meta($user_id, 'badge_value_total', true);
+    $badge_value_total = FrmProEntriesController::get_field_value_shortcode(array('field_id' => 1961, 'user_id' => 'current'));
 
     // Output the appropriate badge image based on the badge value
     if ($badge_value_total > 0 && $badge_value_total < 25) {
@@ -581,3 +581,137 @@ function add_allow_upload_extension_exception( $types, $file, $filename, $mimes 
     return $types;
 }
 add_filter( 'wp_check_filetype_and_ext', 'add_allow_upload_extension_exception', 99, 4 );
+
+function combine_and_format_values_field_1916() {
+    // Add the default values
+    $default_values = array('אח.ות', 'דוד.ה', 'סבא. סבתא');
+    
+    // Get the dynamic value from the form field
+    $dynamic_value = FrmProEntriesController::get_field_value_shortcode(array('field_id' => 1916, 'user_id' => 'current'));
+    
+    // Split the dynamic value into an array
+    $dynamic_values_array = explode(',', $dynamic_value);
+
+    // Trim each value in the dynamic values array to remove leading and trailing spaces
+    $dynamic_values_array = array_map('trim', $dynamic_values_array);
+	
+    // Check if the specific value exists in the dynamic values array
+    if (!in_array('אנו מעוניינים להישאר עם הגדרת נציבות שירות המדינה', $dynamic_values_array)) {
+        // Combine the default and dynamic values
+        $combined_values = array_merge($default_values, $dynamic_values_array);
+    } else {
+        // Use only the dynamic values without merging
+        $combined_values = $default_values;
+    }
+    
+    // Format the values into an HTML unordered list
+    $html_output = '<table><tr>';
+    $count = 0;
+    foreach ($combined_values as $value) {
+        if ($count > 0 && $count % 3 == 0) {
+            $html_output .= '</tr><tr>';
+        }
+        $html_output .= '<td>&#x2022; ' . $value . '</td>';
+        $count++;
+    }
+    $html_output .= '</tr></table>';
+
+    return $html_output;
+}
+
+add_shortcode('combined_values_field_1916', 'combine_and_format_values_field_1916');
+
+function combine_and_format_values_field_1919() {
+    // Add the default values
+    $default_values = array('תאונה', 'מחלקות קשות ETC ETC');
+    
+    // Get the dynamic value from the form field
+    $dynamic_value = FrmProEntriesController::get_field_value_shortcode(array('field_id' => 1919, 'user_id' => 'current'));
+    
+    // Split the dynamic value into an array
+    $dynamic_values_array = explode(',', $dynamic_value);
+
+    // Trim each value in the dynamic values array to remove leading and trailing spaces
+    $dynamic_values_array = array_map('trim', $dynamic_values_array);
+	
+    // Check if the specific value exists in the dynamic values array
+    if (!in_array('אנו מעוניינים להישאר עם הגדרת נציבות שירות המדינה', $dynamic_values_array)) {
+        // Combine the default and dynamic values
+        $combined_values = array_merge($default_values, $dynamic_values_array);
+    } else {
+        // Use only the dynamic values without merging
+        $combined_values = $default_values;
+    }
+    
+    // Format the values into an HTML unordered list
+    $html_output = '<table><tr>';
+    $count = 0;
+    foreach ($combined_values as $value) {
+        if ($count > 0 && $count % 2 == 0) {
+            $html_output .= '</tr><tr>';
+        }
+        $html_output .= '<td>&#x2022; ' . $value . '</td>';
+        $count++;
+    }
+    $html_output .= '</tr></table>';
+
+    return $html_output;
+}
+
+add_shortcode('combined_values_field_1919', 'combine_and_format_values_field_1919');
+
+function combine_and_format_values_field_1936() {
+    // Get the dynamic value from the form field
+    $dynamic_value = FrmProEntriesController::get_field_value_shortcode(array('field_id' => 1936, 'user_id' => 'current'));
+    
+    // Split the dynamic value into an array
+    $dynamic_values_array = explode(',', $dynamic_value);
+
+    // Trim each value in the dynamic values array to remove leading and trailing spaces
+    $dynamic_values_array = array_map('trim', $dynamic_values_array);
+	
+    // Check if the specific value exists in the dynamic values array
+    if (in_array('איננו מעוניינים להרחיב', $dynamic_values_array)) {
+        return false;
+    }
+    
+    // Format the values into an HTML unordered list
+    $html_output = '<table><tr>';
+    $count = 0;
+    foreach ($dynamic_values_array as $value) {
+        if ($count > 0 && $count % 2 == 0) {
+            $html_output .= '</tr><tr>';
+        }
+        $html_output .= '<td>&#x2022; ' . $value . '</td>';
+        $count++;
+    }
+    $html_output .= '</tr></table>';
+
+    return $html_output;
+}
+
+add_shortcode('combined_values_field_1936', 'combine_and_format_values_field_1936');
+
+function combine_and_format_values_field_1939() {    
+    // Get the dynamic value from the form field
+    $dynamic_value = FrmProEntriesController::get_field_value_shortcode(array('field_id' => 1939, 'user_id' => 'current'));
+    
+    // Split the dynamic value into an array
+    $dynamic_values_array = explode(',', $dynamic_value);
+    
+    // Format the values into an HTML unordered list
+    $html_output = '<table><tr>';
+    $count = 0;
+    foreach ($dynamic_values_array as $value) {
+        if ($count > 0 && $count % 1 == 0) {
+            $html_output .= '</tr><tr>';
+        }
+        $html_output .= '<td>&#x2022; ' . $value . '</td>';
+        $count++;
+    }
+    $html_output .= '</tr></table>';
+
+    return $html_output;
+}
+
+add_shortcode('combined_values_field_1939', 'combine_and_format_values_field_1939');

@@ -5,11 +5,11 @@ $company_name = get_user_meta($user_id, 'company_name', true);
 $company_logo = get_user_meta($user_id, 'company_logo', true);
 $first_name = get_user_meta($user_id, 'first_name', true);
 $last_name = get_user_meta($user_id, 'last_name', true);
-$badge_value_total = get_user_meta($user_id, 'badge_value_total', true);
-$c_in_org_full_name = get_user_meta($user_id, 'c_in_org_full_name', true);
-$c_in_org_phone = get_user_meta($user_id, 'c_in_org_phone', true);
-$c_in_org_function = get_user_meta($user_id, 'c_in_org_function', true);
-$c_in_org_email = get_user_meta($user_id, 'c_in_org_email', true);
+$badge_value_total = FrmProEntriesController::get_field_value_shortcode(array('field_id' => 1961, 'user_id' => 'current'));
+$c_in_org_full_name = FrmProEntriesController::get_field_value_shortcode(array('field_id' => 1945, 'user_id' => 'current'));
+$c_in_org_phone = FrmProEntriesController::get_field_value_shortcode(array('field_id' => 1946, 'user_id' => 'current'));
+$c_in_org_function = FrmProEntriesController::get_field_value_shortcode(array('field_id' => 1948, 'user_id' => 'current'));
+$c_in_org_email = FrmProEntriesController::get_field_value_shortcode(array('field_id' => 1947, 'user_id' => 'current'));
 
 $employee_survey_enabled = get_user_meta($user_id, 'employee_survey_enabled', true);
 $employer_survey_link = get_field('employer_survey_link');
@@ -128,9 +128,7 @@ if ( $field_ids ) {
 			<a class="il_edit_charter_btn" href="<?php echo $employer_survey_link; ?>" target="_self"><img src="/wp-content/uploads/2024/01/edit-charter-icon-1.png">ערוך אמנה</a>
 		
 			<?php if ( ! $badge_value_total ) { ?><a class="il_btn button-hover-color-green" href="#" target="_self">לצפייה במדיניות הארגון <img src="/wp-content/uploads/2024/01/dl-button-icon.png"></a><?php } ?>
-			<?php if ( $badge_value_total > 0 && $badge_value_total < 25 ) { ?><a class="il_btn button-hover-color-green" href="#" target="_self">לצפייה במדיניות הארגון <img src="/wp-content/uploads/2024/01/dl-button-icon.png"></a><?php } ?>
-			<?php if ( $badge_value_total >= 25 && $badge_value_total < 500  ) { ?><a class="il_btn button-hover-color-green" href="#" target="_self">לצפייה במדיניות הארגון <img src="/wp-content/uploads/2024/01/dl-button-icon.png"></a><?php } ?>
-			<?php if ( $badge_value_total >= 500  ) { ?><a class="il_btn button-hover-color-green" href="#" target="_self">לצפייה במדיניות הארגון <img src="/wp-content/uploads/2024/01/dl-button-icon.png"></a><?php } ?>
+			<?php if ( $badge_value_total ) { ?><a class="il_btn button-hover-color-green" href="[e2pdf-save id='3' dataset='1895' output='url' download='true' overwrite='true' apply='true']" target="_blank">לצפייה במדיניות הארגון <img src="/wp-content/uploads/2024/01/dl-button-icon.png"></a><?php } ?>
 		</div>
 	</div>
 
@@ -150,7 +148,7 @@ if ( $field_ids ) {
 		</div>
 	</div>
 
-	<div class="ud-width-2_4 ud-emp-q-status <?php if ( ! $badge_value_total ) { echo 'ud-blurred'; } ?>" <?php if ( $badge_value_total && $total_entries == 0 ) { echo 'id="ud-zero-entries"'; } ?>>
+	<div class="ud-width-2_4 ud-emp-q-status <?php if ( ! $employee_survey_enabled || ! $badge_value_total ) { echo 'ud-blurred'; } ?>" <?php if ( $employee_survey_enabled && $badge_value_total && $total_entries == 0 ) { echo 'id="ud-zero-entries"'; } ?>>
 		<p class="ud-emp-q-status-title"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">  <circle cx="9" cy="9.521" r="9" fill="#F9B142"/></svg> סטאטוס שאלון עובדים</p>
 		
 		<div class="ud-emp-q-status-title-info-cont">
@@ -228,7 +226,7 @@ if ( $field_ids ) {
 		<div id="graphs-container" class="graphs-container">
 			<div class="single-graph-container">
 				<h3>אני מטפל ומסייע ל:</h3>
-				<?php echo do_shortcode('[frm-graph fields="' . $field_ids[0] . '" width="100%" chart_area="width:90%, height:60%" type="pie" pie_hole=".4" title="" show_key="1" legend_position="bottom" legend_size="14" colors="#6C25B8, #A456F7, #2F51CA, #7EA9E9, #1386EF, #5385F7, #D030CC, #ED6095"]'); ?>
+				<?php echo do_shortcode('[frm-graph fields="' . $field_ids[1] . '" width="100%" chart_area="width:90%, height:60%" type="pie" pie_hole=".4" title="" show_key="1" legend_position="bottom" legend_size="14" colors="#6C25B8, #A456F7, #2F51CA, #7EA9E9, #1386EF, #5385F7, #D030CC, #ED6095"]'); ?>
 			</div>
 			
 			<div class="single-graph-container">
