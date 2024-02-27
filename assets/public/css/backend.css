@@ -3531,17 +3531,44 @@ div.margin-xl {
     margin: 7.5rem auto;
   }
 }
-.not-interested-caregiver-section .il_btn {
+.not-interested-caregiver-section .nic-thank-you-two-buttons {
+  margin-bottom: 2rem;
+}
+@media (max-width: 797.5px) {
+  .not-interested-caregiver-section .nic-thank-you-two-buttons {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 797.6px) {
+  .not-interested-caregiver-section .nic-thank-you-two-buttons {
+    display: flex;
+    justify-content: center;
+  }
+}
+.not-interested-caregiver-section .nic-thank-you-two-buttons .il_btn {
   padding: 1.4rem 2.8rem;
   align-items: center;
   font-weight: 600;
 }
-.not-interested-caregiver-section .il_btn img {
+.not-interested-caregiver-section .nic-thank-you-two-buttons .il_btn:nth-child(1) {
+  margin-right: 0;
+}
+@media (max-width: 797.5px) {
+  .not-interested-caregiver-section .nic-thank-you-two-buttons .il_btn:nth-child(1) {
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 797.6px) {
+  .not-interested-caregiver-section .nic-thank-you-two-buttons .il_btn:nth-child(1) {
+    margin-left: 14px;
+  }
+}
+.not-interested-caregiver-section .nic-thank-you-two-buttons .il_btn img {
   width: 20px;
   margin-left: 8px;
 }
 @media (max-width: 1199.5px) {
-  .not-interested-caregiver-section .il_btn {
+  .not-interested-caregiver-section .nic-thank-you-two-buttons .il_btn {
     padding: 2rem 4.8rem;
     font-size: 14px;
   }
@@ -3592,17 +3619,44 @@ div.margin-xl {
     margin: 5rem auto 7rem auto;
   }
 }
-.employee-caregiver-thank-you-section .il_btn {
+.employee-caregiver-thank-you-section .nic-thank-you-two-buttons {
+  margin-bottom: 2rem;
+}
+@media (max-width: 797.5px) {
+  .employee-caregiver-thank-you-section .nic-thank-you-two-buttons {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 797.6px) {
+  .employee-caregiver-thank-you-section .nic-thank-you-two-buttons {
+    display: flex;
+    justify-content: center;
+  }
+}
+.employee-caregiver-thank-you-section .nic-thank-you-two-buttons .il_btn {
   padding: 1.4rem 2.8rem;
   align-items: center;
   font-weight: 600;
 }
-.employee-caregiver-thank-you-section .il_btn img {
+.employee-caregiver-thank-you-section .nic-thank-you-two-buttons .il_btn:nth-child(1) {
+  margin-right: 0;
+}
+@media (max-width: 797.5px) {
+  .employee-caregiver-thank-you-section .nic-thank-you-two-buttons .il_btn:nth-child(1) {
+    margin-bottom: 12px;
+  }
+}
+@media (min-width: 797.6px) {
+  .employee-caregiver-thank-you-section .nic-thank-you-two-buttons .il_btn:nth-child(1) {
+    margin-left: 14px;
+  }
+}
+.employee-caregiver-thank-you-section .nic-thank-you-two-buttons .il_btn img {
   width: 20px;
   margin-left: 8px;
 }
 @media (max-width: 1199.5px) {
-  .employee-caregiver-thank-you-section .il_btn {
+  .employee-caregiver-thank-you-section .nic-thank-you-two-buttons .il_btn {
     padding: 2rem 4.8rem;
     font-size: 14px;
   }
@@ -5534,9 +5588,31 @@ div.margin-xl {
 .il_block.user-profile .ud-corp-charter .ud-corp-charter-buttons .il_btn img {
   margin-right: 7px;
 }
-@media (max-width: 1199.5px) {
+@media (max-width: 479.5px) {
   .il_block.user-profile .ud-corp-charter .ud-corp-charter-buttons .il_btn {
     padding: 2rem 4rem;
+  }
+}
+@media (min-width: 479.6px) and (max-width: 797.5px) {
+  .il_block.user-profile .ud-corp-charter .ud-corp-charter-buttons .il_btn {
+    padding: 12px;
+  }
+}
+@media (min-width: 797.6px) and (max-width: 1199.5px) {
+  .il_block.user-profile .ud-corp-charter .ud-corp-charter-buttons .il_btn {
+    padding: 2rem 4rem;
+  }
+}
+@media (max-width: 479.5px) {
+  .il_block.user-profile .ud-corp-charter .ud-corp-charter-buttons .il_btn:nth-child(2) {
+    margin-bottom: 10px;
+    margin-right: 0;
+  }
+}
+@media (min-width: 479.6px) {
+  .il_block.user-profile .ud-corp-charter .ud-corp-charter-buttons .il_btn:nth-child(2) {
+    margin-left: auto;
+    margin-right: 10px;
   }
 }
 @media (min-width: 797.6px) and (max-width: 1199.5px) {

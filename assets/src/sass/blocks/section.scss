@@ -435,17 +435,36 @@
       margin: 7.5rem auto;
     }
   }
-  .il_btn {
-    padding: 1.4rem 2.8rem;
-    align-items: center;
-    font-weight: 600;
-    img {
-      width: 20px;
-      margin-left: 8px;
+  .nic-thank-you-two-buttons {
+    margin-bottom: 2rem;
+    @include tab-max {
+      margin-bottom: 20px;
     }
-    @include limbo-max {
-      padding: 2rem 4.8rem;
-      font-size: 14px;
+    @include limbo-min {
+      display: flex;
+      justify-content: center;
+    }
+    .il_btn {
+      padding: 1.4rem 2.8rem;
+      align-items: center;
+      font-weight: 600;
+      &:nth-child(1) {
+        margin-right: 0;
+        @include tab-max {
+          margin-bottom: 12px;
+        }
+        @include limbo-min {
+          margin-left: 14px;
+        }
+      }
+      img {
+        width: 20px;
+        margin-left: 8px;
+      }
+      @include limbo-max {
+        padding: 2rem 4.8rem;
+        font-size: 14px;
+      }
     }
   }
   .nic-last-div {
@@ -490,17 +509,36 @@
       margin: 5rem auto 7rem auto;
     }
   }
-  .il_btn {
-    padding: 1.4rem 2.8rem;
-    align-items: center;
-    font-weight: 600;
-    img {
-      width: 20px;
-      margin-left: 8px;
+  .nic-thank-you-two-buttons {
+    margin-bottom: 2rem;
+    @include tab-max {
+      margin-bottom: 20px;
     }
-    @include limbo-max {
-      padding: 2rem 4.8rem;
-      font-size: 14px;
+    @include limbo-min {
+      display: flex;
+      justify-content: center;
+    }
+    .il_btn {
+      padding: 1.4rem 2.8rem;
+      align-items: center;
+      font-weight: 600;
+      &:nth-child(1) {
+        margin-right: 0;
+        @include tab-max {
+          margin-bottom: 12px;
+        }
+        @include limbo-min {
+          margin-left: 14px;
+        }
+      }
+      img {
+        width: 20px;
+        margin-left: 8px;
+      }
+      @include limbo-max {
+        padding: 2rem 4.8rem;
+        font-size: 14px;
+      }
     }
   }
   .ecty-last-div {

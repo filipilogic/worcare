@@ -501,8 +501,24 @@
         img {
           margin-right: 7px;
         }
-        @include limbo-max {
+        @include mob-only {
           padding: 2rem 4rem;
+        }
+        @include tab-only {
+          padding: 12px;
+        }
+        @include limbo-only {
+          padding: 2rem 4rem;
+        }
+        &:nth-child(2) {
+          @include mob-only {
+            margin-bottom: 10px;
+            margin-right: 0;
+          }
+          @include tab-min {
+            margin-left: auto;
+            margin-right: 10px;
+          }
         }
       }
     }
