@@ -207,7 +207,7 @@ if ( $field_ids ) {
 		</div>
 		<div class="ud-knowledge-area-col-2">
 			<p class="ud-knowledge-area-title"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">  <circle cx="9" cy="9.521" r="9" fill="#979CE8"/></svg> איזור ידע</p>
-			<p class="ud-knowledge-area-text">לורם איפסום הוא כינוי לטקסט חסר משמעות לחלוטין - הנקרא לפעמים גם דמי טקסט או ג'יבריש - ומיועד להיות ממוקם בסקיצות עיצוביות - של עלונים, מגזינים, מודעות, אתרי אינטרנט וכו'.</p>
+			<p class="ud-knowledge-area-text">ריכזנו לך כאן את כל הכתבות והידיעות אודות עובדים-בני משפחה מטפלים, כיצד מתמודדים עם טיפול בבן משפחה ובו זמנית מנהלים משק בית וקריירה ומהם הכלים המסייעים להקל במצב ולהפחית את הלחץ.</p>
 			<a class="il_btn button-color-pink" href="https://caregivers.org.il/library/" target="_blank">לתכנים נוספים <img src="/wp-content/uploads/2024/01/direct-EDIT-1.png"></a>
 		</div>
 	</div>

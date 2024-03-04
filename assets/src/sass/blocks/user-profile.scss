@@ -704,7 +704,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     .ud-knowledge-area-col-1 {
-      width: 49%;
+      width: 49.5%;
       display: flex;
       .il_inner_posts_container {
         display: flex;
@@ -807,13 +807,13 @@
       }
     }
     .ud-knowledge-area-col-2 {
-      width: 49%;
+      width: 49.5%;
       display: flex;
       flex-direction: column;
       @include desk-min {
         background: url("/wp-content/uploads/2024/01/ILLUS-1.png");
         background-repeat: no-repeat;
-        background-size: 37rem 20.8rem;
+        background-size: 35rem auto;
         background-position: bottom left;
       }
       .ud-knowledge-area-title {
@@ -832,7 +832,7 @@
         color: #fff;
         margin: 2rem 0 3.5rem 0;
         @include desk-min {
-          max-width: 347px;
+          max-width: 358px;
         }
       }
       .il_btn {
