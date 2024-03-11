@@ -3100,6 +3100,11 @@ main {
 .header-main .login-logout-link a img {
   margin-right: 10px;
 }
+@media (min-width: 1199.6px) {
+  .header-main .login-logout-link {
+    margin-right: auto;
+  }
+}
 
 .sub-menu-trigger svg {
   stroke: var(--color-1);
@@ -3120,6 +3125,10 @@ main {
   }
   .menu-toggle {
     display: none;
+  }
+  .main-navigation {
+    flex: 1 0 auto;
+    margin-right: 20px;
   }
   .main-navigation ul {
     display: flex;
