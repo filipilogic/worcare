@@ -152,7 +152,7 @@ if ( $field_ids ) {
 		</div>
 	</div>
 
-	<div class="ud-width-2_4 ud-emp-q-status <?php if ( ! $employee_survey_enabled || ! $badge_value_total ) { echo 'ud-blurred'; } ?>" <?php if ( $employee_survey_enabled && $badge_value_total && $total_entries == 0 ) { echo 'id="ud-zero-entries"'; } ?>>
+	<div class="ud-width-2_4 ud-emp-q-status <?php if ( ! $badge_value_total ) { echo 'ud-blurred'; } ?>" <?php if ( ( ! $employee_survey_enabled && $badge_value_total ) || ( $employee_survey_enabled && $badge_value_total && $total_entries == 0 ) ) { echo 'id="ud-zero-entries"'; } ?>>
 		<p class="ud-emp-q-status-title"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none">  <circle cx="9" cy="9.521" r="9" fill="#F9B142"/></svg> סטאטוס שאלון עובדים</p>
 		
 		<div class="ud-emp-q-status-title-info-cont">
