@@ -288,7 +288,7 @@ if ( $field_ids ) {
 		</div>
 	<?php } ?>
 	<div id="triggerTextMessage">על מנת לקבל גישה לאמנה הארגונית, תו תקן, חבילת תקשורת שיווקית וסקר העובדים עליך ראשית להשלים את יצירת האמנה הארגונית</div>
-	<div id="ud-zero-entries-message">לאחר מילוי הסקר על ידי עובדי הארגון תוכל לצפות בתוצאות הסקר.</div>
+	<div id="ud-zero-entries-message">איזור זה יפתח לצפיה לאחר מילוי השאלון על ידי העובדים</div>
 	<div id="copyEmpSurveyLinkMessage">הקישור הועתק ללוח</div>
 </div>
 
