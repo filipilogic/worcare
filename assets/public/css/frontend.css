@@ -2208,10 +2208,12 @@ div.margin-xl {
 #primary .employee-form .frm-page-1-first-text .employee-page-1-last-p {
   font-size: 16px;
   font-weight: 300;
+  line-height: 26px;
 }
 @media (max-width: 797.5px) {
   #primary .employee-form .frm-page-1-first-text .employee-page-1-last-p {
     font-size: 14px;
+    line-height: 22px;
   }
 }
 #primary .employee-form .frm-align-label-center .frm_primary_label {
