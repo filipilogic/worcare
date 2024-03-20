@@ -5029,7 +5029,7 @@ div.margin-xl {
   font-weight: 500;
   text-align: center;
   position: fixed;
-  bottom: 100px;
+  bottom: 50%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 50;
