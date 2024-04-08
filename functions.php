@@ -623,7 +623,7 @@ add_shortcode('combined_values_field_1916', 'combine_and_format_values_field_191
 
 function combine_and_format_values_field_1919() {
     // Add the default values
-    $default_values = array('תאונה', 'מחלקות קשות ETC ETC');
+    $default_values = array('תאונה', 'מחלות קשות');
     
     // Get the dynamic value from the form field
     $dynamic_value = FrmProEntriesController::get_field_value_shortcode(array('field_id' => 1919, 'user_id' => 'current'));
