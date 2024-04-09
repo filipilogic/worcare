@@ -584,7 +584,7 @@ add_filter( 'wp_check_filetype_and_ext', 'add_allow_upload_extension_exception',
 
 function combine_and_format_values_field_1916() {
     // Add the default values
-    $default_values = array('אח.ות', 'דוד.ה', 'סבא. סבתא');
+    $default_values = array('ילד.ה','אח.ות','הורי בן.ת זוג','בן.ת זוג','הורה');
     
     // Get the dynamic value from the form field
     $dynamic_value = FrmProEntriesController::get_field_value_shortcode(array('field_id' => 1916, 'user_id' => 'current'));
@@ -623,7 +623,7 @@ add_shortcode('combined_values_field_1916', 'combine_and_format_values_field_191
 
 function combine_and_format_values_field_1919() {
     // Add the default values
-    $default_values = array('תאונה', 'מחלות קשות');
+    $default_values = array('מחלות קשות','דיאליזה','אשפוז ממושך','השתלת איברים','מחלות כרוניות','מגבלה קשה עקב מחלה');
     
     // Get the dynamic value from the form field
     $dynamic_value = FrmProEntriesController::get_field_value_shortcode(array('field_id' => 1919, 'user_id' => 'current'));
@@ -647,7 +647,7 @@ function combine_and_format_values_field_1919() {
     $html_output = '<table><tr>';
     $count = 0;
     foreach ($combined_values as $value) {
-        if ($count > 0 && $count % 2 == 0) {
+        if ($count > 0 && $count % 3 == 0) {
             $html_output .= '</tr><tr>';
         }
         $html_output .= '<td>&#x2022; ' . $value . '</td>';
