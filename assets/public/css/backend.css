@@ -1416,6 +1416,15 @@ div.margin-xl {
   flex-wrap: wrap;
   align-content: center;
 }
+@media (min-width: 1199.6px) {
+  .hp-logos-section .il_columns_inner .column:nth-child(1) {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.08) 10px 10px 50px 0px;
+    padding: 23px 0px;
+    margin-bottom: 38px;
+  }
+}
 
 .il_contact-us a {
   display: flex;
