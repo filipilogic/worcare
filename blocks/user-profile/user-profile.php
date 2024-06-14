@@ -129,7 +129,7 @@ if ( $field_ids ) {
 			<a class="il_edit_charter_btn" href="<?php echo $employer_survey_link; ?>" target="_self"><img src="/wp-content/uploads/2024/01/edit-charter-icon-1.png">ערוך אמנה</a>
 		
 			<?php if ( ! $badge_value_total ) { ?><a class="il_btn" href="#" target="_self">קיט פרסומי <img src="/wp-content/uploads/2024/01/dl-button-icon.png"></a><?php } ?>
-			<?php if ( $badge_value_total ) { ?><a class="il_btn" href="/wp-content/uploads/2024/04/WorCare_Kit.zip" target="_blank">קיט פרסומי <img src="/wp-content/uploads/2024/01/dl-button-icon.png"></a><?php } ?>
+			<?php if ( $badge_value_total ) { ?><a class="il_btn" href="/wp-content/uploads/2024/06/WorCare_Kit.zip" target="_blank">קיט פרסומי <img src="/wp-content/uploads/2024/01/dl-button-icon.png"></a><?php } ?>
 
 			<?php if ( ! $badge_value_total ) { ?><a class="il_btn" href="#" target="_self">לצפייה במדיניות הארגון <img src="/wp-content/uploads/2024/01/dl-button-icon.png"></a><?php } ?>
 			<?php if ( $badge_value_total ) { ?><a class="il_btn" href="[e2pdf-save id='3' dataset='1895' output='url' download='true' overwrite='true' apply='true']" target="_blank">לצפייה במדיניות הארגון <img src="/wp-content/uploads/2024/01/dl-button-icon.png"></a><?php } ?>
