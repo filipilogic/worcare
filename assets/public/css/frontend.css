@@ -6530,20 +6530,23 @@ textarea {
   margin: 0 auto 12px auto;
 }
 
-.hp-logos-section .il_columns_inner .column {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: center;
+.hp-logos-section .astra-hp-logo {
+  margin-bottom: 32px;
 }
 @media (min-width: 1199.6px) {
-  .hp-logos-section .il_columns_inner .column:nth-child(1) {
+  .hp-logos-section .astra-hp-logo {
     width: 100%;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.08) 10px 10px 50px 0px;
     padding: 23px 0px;
     margin-bottom: 38px;
   }
+}
+.hp-logos-section .il_columns_inner .column {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
 .il_contact-us a {

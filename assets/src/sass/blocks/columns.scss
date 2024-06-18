@@ -199,21 +199,22 @@
 }
 
 .hp-logos-section {
+  .astra-hp-logo {
+    margin-bottom: 32px;
+    @include desk-min {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.08) 10px 10px 50px 0px;
+      padding: 23px 0px;
+      margin-bottom: 38px;
+    }
+  }
   .il_columns_inner {
     .column {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       align-content: center;
-      @include desk-min {
-        &:nth-child(1) {
-          width: 100%;
-          border-radius: 10px;
-          box-shadow: rgba(0, 0, 0, 0.08) 10px 10px 50px 0px;
-          padding: 23px 0px;
-          margin-bottom: 38px;
-        }
-      }
     }
   }
 }
