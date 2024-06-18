@@ -584,7 +584,7 @@ add_filter( 'wp_check_filetype_and_ext', 'add_allow_upload_extension_exception',
 
 function combine_and_format_values_field_1916() {
     // Add the default values
-    $default_values = array('ילד.ה','אח.ות','הורי בן.ת זוג','בן.ת זוג','הורה');
+    $default_values = array('<b>הורה</b>','<b>בן.ת זוג</b>','<b>הורי בן.ת זוג</b>','<b>אח.ות</b>','<b>ילד.ה</b>');
     
     // Get the dynamic value from the form field
     $dynamic_value = FrmProEntriesController::get_field_value_shortcode(array('field_id' => 1916, 'user_id' => 'current'));
@@ -623,7 +623,7 @@ add_shortcode('combined_values_field_1916', 'combine_and_format_values_field_191
 
 function combine_and_format_values_field_1919() {
     // Add the default values
-    $default_values = array('מחלות קשות','דיאליזה','אשפוז ממושך','השתלת איברים','מחלות כרוניות','מגבלה קשה עקב מחלה');
+	$default_values = array('<b>מגבלה קשה עקב מחלה</b>','<b>מחלות כרוניות</b>','<b>השתלת איברים</b>','<b>אשפוז ממושך</b>','<b>דיאליזה</b>','<b>מחלות קשות</b>');
     
     // Get the dynamic value from the form field
     $dynamic_value = FrmProEntriesController::get_field_value_shortcode(array('field_id' => 1919, 'user_id' => 'current'));
@@ -715,3 +715,127 @@ function combine_and_format_values_field_1939() {
 }
 
 add_shortcode('combined_values_field_1939', 'combine_and_format_values_field_1939');
+
+
+
+// Add JavaScript to dynamically add show/hide functionality to password fields in the footer
+function add_password_toggle_script() {
+    ?>
+    <script type="text/javascript">
+        // Add show/hide functionality to password fields
+        function addPasswordToggle() {
+            var passwordFields = document.querySelectorAll('input[type="password"]');
+            
+            passwordFields.forEach(function(field) {
+                var toggleButton = document.createElement('span');
+                toggleButton.className = 'toggle-password';
+                toggleButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg>'; // Font Awesome icon for 'eye'
+                toggleButton.style.cursor = 'pointer';
+                toggleButton.style.position = 'absolute';
+                toggleButton.style.top = '75%';
+                toggleButton.style.left = '10px';
+                toggleButton.style.transform = 'translateY(-50%)';
+                
+                toggleButton.onclick = function() {
+                    if (field.type === 'password') {
+                        field.type = 'text';
+                        toggleButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c8.4-19.3 10.6-41.4 4.8-63.3c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zM373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5L373 389.9z"/></svg>'; // Font Awesome icon for 'eye-slash'
+                    } else {
+                        field.type = 'password';
+                        toggleButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"/></svg>'; // Font Awesome icon for 'eye'
+                    }
+                };
+                
+                field.parentNode.style.position = 'relative';
+                field.parentNode.appendChild(toggleButton);
+            });
+        }
+
+        // Call the function to add toggle functionality when the document is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            addPasswordToggle();
+        });
+    </script>
+
+
+<script> 
+
+// Create a new span element
+var passwordStrengthSpan = document.createElement("span");
+
+// Set the inner HTML with the provided HTML code
+passwordStrengthSpan.innerHTML = `
+<span id="frm-pass-eight-char-875" class="frm-pass-req">
+    <svg viewBox="0 0 20 20" class="frmsvg frm_cancel1_icon failed_svg">
+        <title>cancel1</title>
+        <path d="M10 0a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm3.6-13L10 8.6 6.4 5 5 6.4 8.6 10 5 13.6 6.4 15l3.6-3.6 3.6 3.6 1.4-1.4-3.6-3.6L15 6.4z"></path>
+    </svg>
+    <svg viewBox="0 0 20 20" class="frmsvg frm_check1_icon passed_svg">
+        <title>check1</title>
+        <path d="M10 .3a9.7 9.7 0 1 0 0 19.4A9.7 9.7 0 0 0 10 .3zm0 1.9a7.8 7.8 0 1 1 0 15.6 7.8 7.8 0 0 1 0-15.6zm5.5 5l-.9-.8a.5.5 0 0 0-.7 0l-5.5 5.5-2.3-2.4a.5.5 0 0 0-.7 0l-.9.9c-.2.2-.2.5 0 .6l3.6 3.6c.2.2.4.2.6 0L15.5 8c.2-.1.2-.4 0-.6z"></path>
+    </svg>
+    מקסימום שמונה תווים
+</span>`;
+
+// Append the span element to the desired location in the DOM
+document.querySelector(".ud-password-change-form .frm-password-strength").appendChild(passwordStrengthSpan);
+
+</script>
+
+<script> 
+// Select all password input fields within the .ud-password-change-form
+var passwordInputs = document.querySelectorAll('.ud-password-change-form input[type="password"]');
+
+// Add event listeners to each password input field
+passwordInputs.forEach(function(passwordInput) {
+    passwordInput.addEventListener('input', function() {
+        // Get the current password value and its length
+        var password = this.value;
+        var passwordLength = password.length;
+
+        // Limit the password length to 8 characters
+        if (passwordLength > 8) {
+            this.value = password.slice(0, 8);
+            passwordLength = 8;
+        }
+
+        // Select the element with the ID directly
+        var specialCharElem = document.getElementById('frm-pass-eight-char-875');
+
+        // Toggle class based on password length
+        if (passwordLength === 8) {
+            specialCharElem.classList.remove('frm-pass-req');
+            specialCharElem.classList.add('frm-pass-verified');
+        } else {
+            specialCharElem.classList.remove('frm-pass-verified');
+            specialCharElem.classList.add('frm-pass-req');
+        }
+    });
+});
+
+</script>
+
+    <?php
+}
+
+// Hook into the wp_footer action
+add_action( 'wp_footer', 'add_password_toggle_script' );
+
+function my_text_strings( $translated_text, $text, $domain ) {
+	switch ( $translated_text ) {
+		case 'סיסמא' :
+			$translated_text = __( 'סיסמה', 'frmreg' );
+			break;
+			
+			
+			case 'שכחת את הסיסמא? לחץ כאן' :
+			$translated_text = __( 'שכחת את הסיסמה? לחץ כאן', 'frmreg' );
+			break;	
+		
+
+
+
+	}
+	return $translated_text;
+}
+add_filter( 'gettext', 'my_text_strings', 20, 3 );
